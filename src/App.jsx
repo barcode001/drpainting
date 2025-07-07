@@ -10,17 +10,19 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <>
+    <div className="page-wrapper">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/thank-you" element={<ThankYou />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

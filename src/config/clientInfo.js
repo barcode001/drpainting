@@ -1,22 +1,22 @@
 const clientInfo = {
-  businessName: "Business Name Here",
-  tagline: "Your business tagline goes here",
-  ownerName: "Owner Name",
+  businessName: "D&R Painting Inc.",
+  tagline: "Expert Residential & Commercial Painting Services",
+  ownerName: "Not Public",
   location: {
-    city: "City",
-    state: "State"
+    city: "Southern Pines",
+    state: "NC"
   },
   contact: {
-    phone: "(000) 000-0000",
-    email: "info@businessdomain.com",
-    address: "1234 Business Address, Suite 100"
+    phone: "(919) 518-7957",
+    email: "info@drpaintinginc.com",
+    address: "" // Mobile-based service; no physical storefront
   },
   social: {
-    instagram: "https://instagram.com/yourbusiness",
-    facebook: "https://facebook.com/yourbusiness",
-    tiktok: "https://tiktok.com/@yourbusiness"
+    instagram: "",
+    facebook: "",
+    tiktok: ""
   },
-  googleAnalyticsID: "G-XXXXXXXXXX"
+  googleAnalyticsID: ""
 };
 
 export default clientInfo;

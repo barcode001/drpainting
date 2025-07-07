@@ -6,6 +6,8 @@
 @use "./layout/navbar";
 @use "./layout/components";
 @use "./layout/services";
+@use "./layout/hero";
+@use "./layout/why-choose-us";
 
 @use "./base/base";
 @use "./base/reset";
@@ -36,4 +38,25 @@
   cursor: pointer;
   z-index: 1000;
   transition: opacity 0.3s ease;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }

@@ -1,26 +1,71 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
+import logoImage from "../assets/images/logo/drpaintinginc-logo.png";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="logo">
-          {/* You can replace this with an image or SVG if you have a brand logo */}
-          <h1>ClientName</h1>
+          <img src={logoImage} alt="Painting crew in action" />
         </Link>
-        <ul className="nav-links">
+
+        <button
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>
+              About
+            </Link>
+          </li>
+          <li className="dropdown">
+            <Link to="/services" onClick={() => setMenuOpen(false)}>
+              Services
+            </Link>
+            <ul className="dropdown-menu">
+              <li>
+                <Link to="/services/residential">Residential</Link>
+              </li>
+              <li>
+                <Link to="/services/commercial">Commercial</Link>
+              </li>
+              <li>
+                <Link to="/services/cabinets">Cabinet Refinishing</Link>
+              </li>
+              <li>
+                <Link to="/services/power-washing">Power Washing</Link>
+              </li>
+            </ul>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/get-quote"
+              className="cta-button"
+              onClick={() => setMenuOpen(false)}
+            >
+              Get a Quote
+            </Link>
           </li>
         </ul>
       </div>
