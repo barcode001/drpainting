@@ -1,6 +1,12 @@
+@use "../abstracts/functions" as *;
+
 .why-choose-us {
   background: #f9f9f9;
   padding: 4rem 1.5rem;
+
+  @media (max-width: rem(430)) {
+    padding: 0.5rem 1.5rem;
+  }
 
   .container {
     max-width: 1200px;
