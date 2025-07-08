@@ -47,8 +47,8 @@ export default function Hero() {
         <div className="card-content">
           <h1>Bring Color to Your World</h1>
           <p>
-            Expert residential & commercial painting services in Southern Pines,
-            NC
+            Expert residential & commercial painting services in Triangle Area
+            Raleigh-Durham, NC
           </p>
           <div className="buttons">
             <Link to="/get-quote" className="hero-button primary">
