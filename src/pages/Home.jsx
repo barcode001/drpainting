@@ -3,6 +3,7 @@ import clientInfo from "../config/clientInfo";
 import Hero from "../components/Hero";
 import Services from "./Services";
 import WhyChooseUs from "./WhyChooseUs";
+import TestimonialsSwiper from "./TestimonialsSwiper";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <Hero />
       <Services />
       <WhyChooseUs />
+      <TestimonialsSwiper />
     </div>
   );
 }

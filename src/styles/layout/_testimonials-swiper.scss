@@ -1,0 +1,64 @@
+@use "../abstracts/functions" as *;
+.testimonials-swiper {
+  padding: 4rem 1.5rem;
+  background-color: #fffce8;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #222;
+  }
+  .center-button {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .testimonial-slide {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    height: rem(200);
+
+    .quote {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .meta {
+      font-weight: 600;
+      color: #d4a437;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: #d4a437;
+    opacity: 0.6;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+}
+
+.review-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #d4a437;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #b8922b;
+  }
+}

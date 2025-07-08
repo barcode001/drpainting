@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheckCircle, FaClock, FaSmile, FaBroom } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const benefits = [
   {
@@ -38,6 +39,11 @@ export default function WhyChooseUs() {
               <p>{item.description}</p>
             </div>
           ))}
+        </div>
+        <div className="cta-button">
+          <Link to="/get-quote" className="hero-button primary">
+            Get a Free Estimate
+          </Link>
         </div>
       </div>
     </section>

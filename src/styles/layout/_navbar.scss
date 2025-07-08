@@ -17,10 +17,23 @@
   }
 
   .logo {
+    height: 50px;
+    margin: 0;
+    padding: 0;
+
     img {
-      height: 50px;
-      width: 80px;
+      top: 0;
+      width: 63px;
+      height: 100%;
       object-fit: cover;
+    }
+
+    @media (min-width: rem(430)) {
+      height: none;
+      img {
+        height: 65px;
+        width: 70px;
+      }
     }
   }
 

@@ -12,7 +12,7 @@ export default function Services() {
         <h2 className="section-title">Our Painting Services</h2>
         <div className="services-grid">
           <div className="service-card">
-            <img src={residental} alt="Residential Painting" />
+            <img src={residental} alt="Residential Painting" loading="lazy" />
             <h3>Residential Painting</h3>
             <p>
               Brighten up your home with expert interior & exterior painting
@@ -20,7 +20,7 @@ export default function Services() {
             </p>
           </div>
           <div className="service-card">
-            <img src={comerical} alt="Commercial Painting" />
+            <img src={comerical} alt="Commercial Painting" loading="lazy" />
             <h3>Commercial Painting</h3>
             <p>
               Professional painting for offices, retail spaces, and industrial
@@ -28,7 +28,7 @@ export default function Services() {
             </p>
           </div>
           <div className="service-card">
-            <img src={cabinet} alt="Cabinet Refinishing" />
+            <img src={cabinet} alt="Cabinet Refinishing" loading="lazy" />
             <h3>Cabinet Refinishing</h3>
             <p>
               Modernize your kitchen or bathroom with smooth, durable cabinet
@@ -36,7 +36,7 @@ export default function Services() {
             </p>
           </div>
           <div className="service-card">
-            <img src={powerWashing} alt="Power Washing" />
+            <img src={powerWashing} alt="Power Washing" loading="lazy" />
             <h3>Power Washing</h3>
             <p>
               Remove dirt, mold, and grime from exterior surfaces before
