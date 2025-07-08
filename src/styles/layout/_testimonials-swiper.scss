@@ -6,6 +6,7 @@
   @media (max-width: rem(430)) {
     padding: 0.5rem 1.5rem;
   }
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -30,7 +31,7 @@
     margin: 0 auto;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
-    height: rem(200);
+    height: rem(170);
 
     .quote {
       font-style: italic;
@@ -66,4 +67,32 @@
   &:hover {
     color: #b8922b;
   }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #d4a437; // gold
+  background: rgba(255, 255, 255, 0.9); // light background circle
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); // shadow for contrast
+  z-index: 2;
+
+  &:after {
+    font-size: 20px;
+  }
+
+  &:hover {
+    color: #b8922b;
+    background: #fffbe2;
+  }
+}
+
+.swiper-button-next {
+  right: -20px;
+}
+
+.swiper-button-prev {
+  left: -20px;
 }
