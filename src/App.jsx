@@ -7,7 +7,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import ThankYou from "./pages/ThankYou";
 import Contact from "./pages/Contact";
-
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <div className="page-wrapper">
@@ -19,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
