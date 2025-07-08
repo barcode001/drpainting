@@ -14,11 +14,13 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-card">
           <h4>Contact</h4>
-          <p>Serving Southern Pines, NC</p>
-          <p>(919) 518-7957</p>
-          <p>info@drpaintinginc.com</p>
+          <p>
+            Serving {clientInfo.location.city}, {clientInfo.location.county},{" "}
+            {clientInfo.location.state}
+          </p>
+          <p>{clientInfo.contact.phone}</p>
+          <p>{clientInfo.contact.email}</p>
         </div>
-
         <div className="footer-card">
           <h4>Follow Us</h4>
           <a href="https://instagram.com/drpaintinginc" target="_blank">

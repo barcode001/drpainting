@@ -3,11 +3,12 @@ const clientInfo = {
   tagline: "Expert Residential & Commercial Painting Services",
   ownerName: "Not Public",
   location: {
-    city: "Southern Pines",
+    city: "Triangle Area Raleigh-Durham",
+    county: "Wake County",
     state: "NC"
   },
   contact: {
-    phone: "(919) 518-7957",
+    phone: "(919) 519-1699",
     email: "info@drpaintinginc.com",
     address: "" // Mobile-based service; no physical storefront
   },
