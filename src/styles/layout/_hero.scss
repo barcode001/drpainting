@@ -15,25 +15,55 @@
     text-align: center;
     position: relative;
 
-    // .card-image {
-    //   width: 100%;
-    //   height: auto;
-    //   object-fit: cover;
-    //   background-color: blueviolet;
-    // }
+    .card-image {
+      background-color: var(--bg-color, #b8922b); // default color
+      transition: background-color 1.2s ease;
+      display: flex;
+      justify-content: center;
+      position: relative; // Important for layering
 
-    // .card-image {
-    //   background-color: var(--bg-color, #f4c430); // default color
-    //   transition: background-color 1.2s ease;
-    //   display: flex;
-    //   justify-content: center;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        box-sizing: border-box;
+      }
 
-    //   img {
-    //     width: 100%;
-    //     height: auto;
-    //     object-fit: cover;
-    //   }
-    // }
+      .painter {
+        position: absolute;
+        top: 0;
+
+        left: -25%;
+        z-index: 2; // Make sure this is above .hero-bg-image
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        pointer-events: none; // optional, makes sure it doesn’t block clicks
+        box-sizing: border-box;
+        @media (max-width: 430px) {
+          object-fit: cover;
+        }
+      }
+
+      .hero-bg-image {
+        // position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        min-height: 350px;
+        object-fit: cover;
+        box-sizing: border-box;
+      }
+      h1 {
+        top: 5%;
+        right: 10%;
+        font-weight: 700;
+        position: absolute;
+        color: white;
+        font-size: clamp(rem(21), 4vw, rem(65));
+      }
+    }
 
     .card-content {
       padding: 1.3rem;
@@ -85,49 +115,6 @@
         }
       }
     }
-  }
-}
-
-.card-image {
-  background-color: var(--bg-color, #b8922b); // default color
-  transition: background-color 1.2s ease;
-  display: flex;
-  justify-content: center;
-  position: relative; // Important for layering
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .painter {
-    position: absolute;
-    top: 0;
-    left: -25%;
-    z-index: 2; // Make sure this is above .hero-bg-image
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    pointer-events: none; // optional, makes sure it doesn’t block clicks
-  }
-
-  .hero-bg-image {
-    // position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    min-height: 350px;
-    object-fit: cover;
-  }
-  h1 {
-    top: 5%;
-    right: 10%;
-    font-weight: 700;
-    position: absolute;
-    color: white;
-    font-size: clamp(rem(21), 4vw, rem(65));
   }
 }
 
