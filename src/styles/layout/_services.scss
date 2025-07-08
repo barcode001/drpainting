@@ -5,7 +5,7 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.3rem; // Optional side padding for mobile spacing
+    padding: 0 0; // Optional side padding for mobile spacing
   }
 
   .section-title {
@@ -23,9 +23,17 @@
   .service-card {
     background: #fff;
     border-radius: 12px;
-    padding: 2rem 1.5rem;
+    // padding: 2rem 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
 
     &:hover {
       transform: translateY(-4px);
