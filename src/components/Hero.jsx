@@ -1,48 +1,8 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import clientInfo from "../config/clientInfo";
-// import heroBg from "../assets/images/hero/hero2.png"; // Replace with your image
-
-// export default function Hero() {
-//   return (
-//     <section className="hero-card">
-//       <div className="card">
-//         <img
-//           src={heroBg}
-//           className="card-image"
-//           alt="Professional painter applying yellow paint in a modern living room"
-//           width="1100"
-//           height="500"
-//           loading="lazy"
-//         />
-//         <div className="card-content">
-//           <h1>Bring Color to Your World</h1>
-//           <p>
-//             Expert residential & commercial painting services in Southern Pines,
-//             NC
-//           </p>
-//           <div className="buttons">
-//             <Link to="/get-quote" className="hero-button primary">
-//               Get a Quote
-//             </Link>
-//             <a
-//               href={`tel:${clientInfo.contact.phone.replace(/\D/g, "")}`}
-//               className="hero-button al secondary"
-//             >
-//               Call Now
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import clientInfo from "../config/clientInfo";
 import heroBg from "../assets/images/hero/hero2.png"; // Fallback image
-import heroBg2 from "../assets/images/hero/hero-person.png"; // Fallback image
+import heroBg2 from "../assets/images/hero/hero-person1.png"; // Fallback image
 
 const bgColors = ["#f4c430", "#ff6f61", "#6ec1e4", "#81c784", "#f8b195"];
 
