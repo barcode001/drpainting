@@ -26,10 +26,13 @@ export default function Footer() {
         </nav>
 
         <div className="footer-socials">
-          <a href="https://instagram.com/drpaintinginc" target="_blank">
+          <a href="https://www.instagram.com/d.r.painting.inc" target="_blank">
             <FaInstagram />
           </a>
-          <a href="https://facebook.com/drpaintinginc" target="_blank">
+          <a
+            href="https://www.facebook.com/people/DR-Painting-Inc/61562794095060/"
+            target="_blank"
+          >
             <FaFacebookF />
           </a>
           <a href="https://tiktok.com/@drpaintinginc" target="_blank">
