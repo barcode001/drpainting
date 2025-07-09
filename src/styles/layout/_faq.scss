@@ -1,0 +1,60 @@
+@use "../abstracts/functions" as *;
+
+.faq-section {
+  padding: 4rem 1.5rem;
+  background-color: #fffce8;
+  @media (max-width: rem(430)) {
+    margin-top: -100px;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .faq-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 2rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease;
+
+    .faq-question {
+      font-weight: 700;
+      color: #d4a437;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .faq-answer {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.5;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    &.open {
+      background: #fff9db;
+
+      .faq-answer {
+        max-height: 500px;
+      }
+    }
+  }
+}

@@ -1,21 +1,41 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import logoImage from "../assets/images/logo/drpaintinginc-logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+    window.scrollTo(0, 0);
+  };
+  // useEffect(() => {
+  //   if (menuOpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "";
+  //   }
+  // }, [menuOpen]);
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="logo">
-          <img src={logoImage} alt="Painting crew in action" />
+        <Link to="/" className="logo" onClick={handleLinkClick}>
+          <img src={logoImage} alt="D&R Painting logo" width="63" height="50" />
+        </Link>
+
+        {/* Left-side CTA button for mobile */}
+        <Link
+          to="/contact"
+          className="mobile-quote-btn"
+          onClick={handleLinkClick}
+        >
+          Get a Quote
         </Link>
 
         <button
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
-          onClick={toggleMenu}
+          onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
           <span></span>
@@ -25,46 +45,48 @@ export default function Navbar() {
 
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/" onClick={() => setMenuOpen(false)}>
+            <Link to="/" onClick={handleLinkClick}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={() => setMenuOpen(false)}>
+            <Link to="/about" onClick={handleLinkClick}>
               About
             </Link>
           </li>
           <li className="dropdown">
-            <Link to="/services" onClick={() => setMenuOpen(false)}>
+            <HashLink smooth to="/#services" onClick={handleLinkClick}>
               Services
-            </Link>
+            </HashLink>
             <ul className="dropdown-menu">
               <li>
-                <Link to="/services/residential">Residential</Link>
+                <Link to="/services/residential" onClick={handleLinkClick}>
+                  Residential
+                </Link>
               </li>
               <li>
-                <Link to="/services/commercial">Commercial</Link>
+                <Link to="/services/commercial" onClick={handleLinkClick}>
+                  Commercial
+                </Link>
               </li>
               <li>
-                <Link to="/services/cabinets">Cabinet Refinishing</Link>
+                <Link
+                  to="services/cabinet-refinishing"
+                  onClick={handleLinkClick}
+                >
+                  Cabinet Refinishing
+                </Link>
               </li>
               <li>
-                <Link to="/services/power-washing">Power Washing</Link>
+                <Link to="/services/power-washing" onClick={handleLinkClick}>
+                  Power Washing
+                </Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link to="/contact" onClick={() => setMenuOpen(false)}>
+            <Link to="/contact" onClick={handleLinkClick}>
               Contact
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/get-quote"
-              className="cta-button"
-              onClick={() => setMenuOpen(false)}
-            >
-              Get a Quote
             </Link>
           </li>
         </ul>

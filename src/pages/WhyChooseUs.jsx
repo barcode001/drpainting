@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
           ))}
         </div>
         <div className="cta-button">
-          <Link to="/get-quote" className="hero-button primary">
+          <Link to="/contact" className="hero-button primary">
             Get a Free Estimate
           </Link>
         </div>

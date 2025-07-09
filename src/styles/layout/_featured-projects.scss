@@ -1,0 +1,88 @@
+@use "../abstracts/functions" as *;
+
+.featured-projects {
+  padding: 4rem 1.5rem;
+  background-color: #fffce8;
+  @media (max-width: rem(430)) {
+    margin-top: -60px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2.5rem;
+  }
+
+  .project-slide {
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    transition: transform 0.3s ease;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper {
+    padding-bottom: 3rem;
+  }
+
+  .swiper-pagination-bullet {
+    background: #d4a437;
+
+    opacity: 0.5;
+    &-active {
+      opacity: 1;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #d4a437;
+    transition: color 0.3s ease;
+    margin: rem(25);
+
+    &:hover {
+      color: #b8922b;
+    }
+  }
+
+  .center-button {
+    margin-top: 2rem;
+    @media (max-width: rem(430)) {
+      margin-top: rem(0);
+    }
+
+    .hero-button {
+      background-color: #d4a437;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #b8922b;
+      }
+    }
+  }
+}

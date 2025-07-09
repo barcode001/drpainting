@@ -25,6 +25,7 @@
   }
   .testimonial-slide {
     background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.128);
     border-radius: 1rem;
     padding: 2rem;
     max-width: 700px;
@@ -58,10 +59,10 @@
 .review-link {
   display: inline-block;
   margin-top: 1rem;
-  color: #d4a437;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
+  color: #333;
 
   &:hover {
     color: #b8922b;

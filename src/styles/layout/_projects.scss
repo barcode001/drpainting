@@ -1,0 +1,50 @@
+@use "../abstracts/functions" as *;
+
+.projects-page {
+  padding: 4rem 1.5rem;
+  background-color: #fff;
+  @media (max-width: 430px) {
+    padding: 0 1.5rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 3rem;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+
+    .image-card {
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

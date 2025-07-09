@@ -20,28 +20,22 @@ export default function Hero() {
     <section className="hero-card">
       <div className="card">
         <div className="card-image" style={{ "--bg-color": bgColors[bgIndex] }}>
-          <div
-            className="card-image"
-            style={{ "--bg-color": bgColors[bgIndex] }}
-          >
-            <img
-              src={heroBg2}
-              alt="Painter"
-              className="painter"
-              width="1100"
-              height="500"
-              loading="lazy"
-            />
-            <img
-              src={heroBg}
-              alt="Living room background"
-              className="hero-bg-image"
-              width="1100"
-              height="500"
-              loading="lazy"
-            />
-            {/* <h1>Bring Color to Your World</h1> */}
-          </div>
+          <img
+            src={heroBg2}
+            alt="Painter"
+            className="painter"
+            width="1100"
+            height="500"
+            loading="lazy"
+          />
+          <img
+            src={heroBg}
+            alt="Living room background"
+            className="hero-bg-image"
+            width="1100"
+            height="500"
+            loading="lazy"
+          />
         </div>
 
         <div className="card-content">
@@ -51,7 +45,7 @@ export default function Hero() {
             Raleigh-Durham, NC
           </p>
           <div className="buttons">
-            <Link to="/get-quote" className="hero-button primary">
+            <Link to="/contact" className="hero-button primary">
               Get a Quote
             </Link>
             <a

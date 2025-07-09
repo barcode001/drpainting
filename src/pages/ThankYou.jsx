@@ -1,12 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function ThankYou() {
+export default function ThankYou() {
   return (
-    <div>
-      <h1>Thank You!</h1>
-      <p>We have received your message and will get back to you shortly.</p>
-    </div>
+    <section className="thank-you-page">
+      <div className="container">
+        <h1>Thank You!</h1>
+        <p>Your message has been sent. We’ll be in touch shortly.</p>
+        <Link to="/" className="hero-button primary">
+          Back to Home
+        </Link>
+      </div>
+    </section>
   );
 }
-
-export default ThankYou;

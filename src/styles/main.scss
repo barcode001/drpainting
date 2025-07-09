@@ -10,6 +10,11 @@
 @use "./layout/why-choose-us";
 @use "./layout/testimonials-swiper";
 @use "./layout/not-found";
+@use "./layout/featured-projects";
+@use "./layout//projects";
+@use "./layout/faq";
+@use "./layout/contact";
+@use "./layout/thank-you";
 
 @use "./base/base";
 @use "./base/reset";
@@ -46,7 +51,6 @@ html,
 body {
   height: 100%;
   margin: 0;
-  scroll-behavior: smooth;
 }
 
 .page-wrapper {

@@ -1,0 +1,32 @@
+.thank-you-page {
+  text-align: center;
+  padding: 4rem 1.5rem;
+
+  h1 {
+    font-size: 2.5rem;
+    animation: fadeSlideUp 0.8s ease-out;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: #555;
+    animation: fadeSlideUp 1s ease-out 0.2s backwards;
+  }
+
+  .hero-button {
+    margin-top: 2rem;
+    animation: fadeSlideUp 1.2s ease-out 0.4s backwards;
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

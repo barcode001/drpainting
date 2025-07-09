@@ -4,6 +4,8 @@ import Hero from "../components/Hero";
 import Services from "./Services";
 import WhyChooseUs from "./WhyChooseUs";
 import TestimonialsSwiper from "./TestimonialsSwiper";
+import FeaturedProjects from "./FeaturedProjects";
+import FAQ from "./FAQ";
 
 function Home() {
   return (
@@ -12,6 +14,8 @@ function Home() {
       <Services />
       <WhyChooseUs />
       <TestimonialsSwiper />
+      <FeaturedProjects />
+      <FAQ />
     </div>
   );
 }

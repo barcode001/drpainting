@@ -29,7 +29,7 @@
     background: #fff;
     border-radius: 12px;
     // padding: 2rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.128);
     transition: transform 0.3s;
 
     img {
@@ -55,6 +55,37 @@
       color: #666;
       font-size: 0.95rem;
       padding: 0 1.5rem;
+    }
+  }
+  .hero-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: rem(5);
+    margin-bottom: rem(10);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+
+    &.primary {
+      background-color: #d4a437;
+      color: #fff;
+
+      &:hover {
+        background-color: #b8922b;
+      }
+    }
+
+    &.secondary {
+      background-color: #f1f1f1;
+      color: #333;
+
+      &:hover {
+        background-color: #e1e1e1;
+      }
     }
   }
 }
