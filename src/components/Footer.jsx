@@ -20,7 +20,6 @@ export default function Footer() {
         <nav className="footer-links">
           <Link to="/">Home</Link>
           <Link to="/services">Services</Link>
-          <Link to="/pricing">Pricing</Link>
           <Link to="/projects">Portfolio</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
