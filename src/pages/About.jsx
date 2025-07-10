@@ -1,6 +1,7 @@
 import React from "react";
-import aboutImage from "../assets/images/services/residental.jpeg"; // Replace with your actual image path
+// import aboutImage from "../assets/images/services/residental.jpeg"; // Replace with your actual image path
 import useRevealOnScroll from "../components/useRevealOnScroll";
+import { Link } from "react-router-dom";
 
 export default function About() {
   useRevealOnScroll();
@@ -50,9 +51,12 @@ export default function About() {
               <br />
               <strong>Dulce & Ricardo</strong>
             </p>
-          </div>
 
-          <div className="about-image reveal">
+            <Link to="/contact" className="hero-button primary">
+              Get a Free Quote
+            </Link>
+          </div>
+          {/* <div className="about-image reveal">
             <img
               src={aboutImage}
               alt="Dulce and Ricardo - D&R Painting"
@@ -60,7 +64,7 @@ export default function About() {
               width="500"
               height="600"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -33,7 +33,7 @@ export default function TestimonialsSwiper() {
         >
           {testimonials.map((review, index) => (
             <SwiperSlide key={index}>
-              <div className="testimonial-slide reveal">
+              <div className="testimonial-slide ">
                 <p className="quote reveal">“{review.quote}”</p>
                 <span className="meta reveal">
                   {Array(review.rating).fill("★").join("")} — {review.name}{" "}
