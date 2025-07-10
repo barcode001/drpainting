@@ -30,17 +30,17 @@ export default function WhyChooseUs() {
   return (
     <section className="why-choose-us">
       <div className="container">
-        <h2>Why Homeowners Choose D&R Painting</h2>
+        <h2 className="reveal">Why Homeowners Choose D&R Painting</h2>
         <div className="benefits-grid">
           {benefits.map((item, index) => (
-            <div className="benefit-card" key={index}>
-              <div className="icon">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+            <div className="benefit-card reveal" key={index}>
+              <div className="icon reveal">{item.icon}</div>
+              <h3 className="reveal">{item.title}</h3>
+              <p className="reveal">{item.description}</p>
             </div>
           ))}
         </div>
-        <div className="cta-button">
+        <div className="cta-button reveal">
           <Link to="/contact" className="hero-button primary">
             Get a Free Estimate
           </Link>

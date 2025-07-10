@@ -12,16 +12,18 @@ import img5 from "../assets/images/services/kitchen3.jpeg";
 import img6 from "../assets/images/services/cabinets.jpeg";
 import img7 from "../assets/images/services/kitchen4.jpeg";
 import img8 from "../assets/images/services/home1.jpeg";
+import useRevealOnScroll from "../components/useRevealOnScroll";
 
 // Replace with actual image paths or import if using Vite
 const featuredImages = [img1, img2, img3, img4, img5, img6, img7, img8];
 
 export default function FeaturedProjects() {
+  useRevealOnScroll();
   return (
     <section className="featured-projects">
-      <div className="container">
-        <h2>Recent Projects</h2>
-        <p className="section-description">
+      <div className="container reveal">
+        <h2 className="reveal">Recent Projects</h2>
+        <p className="section-description reveal">
           A preview of some of our latest transformations across the Triangle
           Area.
         </p>
@@ -33,7 +35,7 @@ export default function FeaturedProjects() {
             dynamicBullets: true,
             dynamicMainBullets: 5,
           }}
-          autoplay={{ delay: 4000 }}
+          autoplay={{ delay: 8000 }}
           spaceBetween={30}
           slidesPerView={1}
           loop={true}
@@ -54,7 +56,7 @@ export default function FeaturedProjects() {
           ))}
         </Swiper>
 
-        <div className="center-button">
+        <div className="center-button reveal">
           <a href="/projects" className="hero-button primary">
             See More Projects
           </a>

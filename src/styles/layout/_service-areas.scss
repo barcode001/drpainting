@@ -1,0 +1,49 @@
+.service-areas {
+  padding: 4rem 1.5rem;
+  text-align: center;
+
+  @media (max-width: 430px) {
+    padding: 0 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .locations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li::before {
+      content: "📍";
+      margin-right: 0.5rem;
+    }
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+}
+
+.location-icon.reveal {
+  transition: transform 0.4s ease;
+  &.revealed {
+    transform: translateY(0);
+  }
+}

@@ -1,11 +1,12 @@
 import React from "react";
-import clientInfo from "../config/clientInfo";
+// import clientInfo from "../config/clientInfo";
 import Hero from "../components/Hero";
 import Services from "./Services";
 import WhyChooseUs from "./WhyChooseUs";
 import TestimonialsSwiper from "./TestimonialsSwiper";
 import FeaturedProjects from "./FeaturedProjects";
 import FAQ from "./FAQ";
+import ServiceAreas from "./ServiceAreas";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <TestimonialsSwiper />
       <FeaturedProjects />
       <FAQ />
+      <ServiceAreas />
     </div>
   );
 }

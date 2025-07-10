@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import faqs from "../config/faqs"; // We'll create this next
+import useRevealOnScroll from "../components/useRevealOnScroll";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -8,19 +9,20 @@ export default function FAQ() {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
+  useRevealOnScroll();
   return (
     <section className="faq-section">
-      <div className="container">
-        <h2 className="faq-heading">Frequently Asked Questions</h2>
-        <div className="faq-list">
+      <div className="container reveal">
+        <h2 className="faq-heading reveal">Frequently Asked Questions</h2>
+        <div className="faq-list reveal">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`faq-item ${openIndex === index ? "open" : ""}`}
+              className={`faq-item  ${openIndex === index ? "open" : ""}`}
               onClick={() => toggleFAQ(index)}
             >
-              <div className="faq-question">{faq.question}</div>
-              <div className="faq-answer">{faq.answer}</div>
+              <div className="faq-question reveal">{faq.question}</div>
+              <div className="faq-answer reveal">{faq.answer}</div>
             </div>
           ))}
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import clientInfo from "../config/clientInfo";
 import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -19,7 +20,7 @@ export default function Footer() {
 
         <nav className="footer-links">
           <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
+          <HashLink to="/#services">Services</HashLink>
           <Link to="/projects">Portfolio</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>

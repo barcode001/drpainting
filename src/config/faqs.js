@@ -18,6 +18,10 @@ const faqs = [
   {
     question: "Do you clean up after the job is done?",
     answer: "Absolutely. We leave your home or space spotless and ready to enjoy — no mess left behind."
+  },
+   {
+    question: "How long have you been in business?",
+    answer: "We've been working in the painting industry for over 20 years. Our experience allows us to deliver high-quality work, attention to detail, and reliable service you can count on."
   }
 ];
 
