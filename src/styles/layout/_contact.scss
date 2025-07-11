@@ -86,4 +86,40 @@
       flex: 1 1 100%;
     }
   }
+  .contact-form select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    color: #333;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+  }
+
+  .contact-form select:focus {
+    border-color: #007bff; // or your primary color
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+  }
+  .contact-form select {
+    -webkit-appearance: none; /* Fix Safari default styles */
+    -moz-appearance: none;
+    appearance: none;
+
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23666' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 10px 6px;
+    padding-right: 2rem; // extra space for dropdown arrow
+  }
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      .contact-form select {
+        background-image: none;
+      }
+    }
+  }
 }

@@ -103,30 +103,41 @@ function Contact() {
 
           <div className="contact-grid">
             <form className="contact-form" ref={form} onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="user_name"
-                placeholder="Full Name"
-                required
-              />
+              <input type="text" name="name" placeholder="Full Name" required />
               <input
                 type="email"
-                name="user_email"
+                name="email"
                 placeholder="Email Address"
                 required
               />
-              <input
-                type="tel"
-                name="user_phone"
-                placeholder="Phone Number"
-                required
-              />
+              <input type="tel" name="phone" placeholder="Phone Number" />
+              <select name="project_type" required>
+                <option value="">Select Project Type</option>
+                <option value="Interior Residential">
+                  Interior Residential
+                </option>
+                <option value="Exterior Residential">
+                  Exterior Residential
+                </option>
+                <option value="Commercial Painting">Commercial Painting</option>
+                <option value="Cabinet Refinishing">Cabinet Refinishing</option>
+                <option value="Power Washing">Power Washing</option>
+                <option value="Other">Other</option>
+              </select>
               <textarea
                 name="message"
                 placeholder="Your Message"
                 rows="5"
                 required
               ></textarea>
+
+              {/* Hidden time field for EmailJS template */}
+              <input
+                type="hidden"
+                name="time"
+                value={new Date().toLocaleString()}
+              />
+
               <button
                 type="submit"
                 className="hero-button primary"
@@ -134,9 +145,9 @@ function Contact() {
               >
                 {sending ? "Sending..." : "Send Message"}
               </button>
+
               {error && <p className="form-error">{error}</p>}
             </form>
-
             <div className="contact-info">
               <h3>Contact Info</h3>
               <p>
