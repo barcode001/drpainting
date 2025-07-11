@@ -14,101 +14,60 @@ export default function Services() {
       <div className="container">
         <h2 className="section-title reveal">Our Painting Services</h2>
         <div className="services-grid">
-          <div className="service-card">
-            <img
-              src={residental}
-              alt="Residential Painting"
-              width="400"
-              height="250"
-              loading="lazy"
-            />
-            <h3 className="reveal">Residential Painting</h3>
-            <p className="reveal">
-              Brighten up your home with expert interior & exterior painting
-              services.
-            </p>
-            <div className="card-btn reveal">
-              <Link
-                to="/services/residential"
-                className="hero-button secondary"
-                aria-label="Learn more about Residential Painting"
-              >
-                Learn More
-              </Link>
+          {[
+            {
+              title: "Residential Painting",
+              description:
+                "Brighten up your home with expert interior & exterior painting services.",
+              image: residental,
+              alt: "Residential Painting",
+              path: "/services/residential",
+            },
+            {
+              title: "Commercial Painting",
+              description:
+                "Professional painting for offices, retail spaces, and industrial buildings.",
+              image: commercial,
+              alt: "Commercial Painting",
+              path: "/services/commercial",
+            },
+            {
+              title: "Cabinet Refinishing",
+              description:
+                "Modernize your kitchen or bathroom with smooth, durable cabinet finishes.",
+              image: cabinets,
+              alt: "Cabinet Refinishing",
+              path: "/services/cabinet-refinishing",
+            },
+            {
+              title: "Power Washing",
+              description:
+                "Remove dirt, mold, and grime from exterior surfaces before painting.",
+              image: powerWashing,
+              alt: "Power Washing",
+              path: "/services/power-washing",
+            },
+          ].map((service, index) => (
+            <div className="service-card" key={index}>
+              <img
+                src={service.image}
+                alt={service.alt}
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <h3 className="reveal">{service.title}</h3>
+              <p className="reveal">{service.description}</p>
+              <div className="card-btn reveal">
+                <Link to={service.path} className="hero-button secondary">
+                  <span className="visually-hidden">
+                    Learn more about {service.title}
+                  </span>
+                  <span aria-hidden="true">Learn More</span>
+                </Link>
+              </div>
             </div>
-          </div>
-
-          <div className="service-card">
-            <img
-              src={commercial}
-              alt="Commercial Painting"
-              width="400"
-              height="250"
-              loading="lazy"
-            />
-            <h3 className="reveal">Commercial Painting</h3>
-            <p className="reveal">
-              Professional painting for offices, retail spaces, and industrial
-              buildings.
-            </p>
-            <div className="card-btn reveal">
-              <Link
-                to="/services/commercial"
-                className="hero-button secondary"
-                aria-label="Learn more about Commercial Painting"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-
-          <div className="service-card">
-            <img
-              src={cabinets}
-              alt="Cabinet Refinishing"
-              width="400"
-              height="250"
-              loading="lazy"
-            />
-            <h3 className="reveal">Cabinet Refinishing</h3>
-            <p className="reveal">
-              Modernize your kitchen or bathroom with smooth, durable cabinet
-              finishes.
-            </p>
-            <div className="card-btn reveal">
-              <Link
-                to="/services/cabinet-refinishing"
-                className="hero-button secondary"
-                aria-label="Learn more about Cabinet Refinishing"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-
-          <div className="service-card">
-            <img
-              src={powerWashing}
-              alt="Power Washing"
-              width="400"
-              height="250"
-              loading="lazy"
-            />
-            <h3 className="reveal">Power Washing</h3>
-            <p className="reveal">
-              Remove dirt, mold, and grime from exterior surfaces before
-              painting.
-            </p>
-            <div className="card-btn reveal">
-              <Link
-                to="/services/power-washing"
-                className="hero-button secondary"
-                aria-label="Learn more about Power Washing"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
