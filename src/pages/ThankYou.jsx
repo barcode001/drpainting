@@ -14,7 +14,6 @@ export default function ThankYou() {
         <meta name="robots" content="noindex" />
         <link rel="canonical" href="https://www.drpaintinginc.com/thank-you" />
       </Helmet>
-
       <section className="thank-you-page">
         <div className="container">
           <h1>Thank You!</h1>
