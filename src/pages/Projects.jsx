@@ -1,11 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import img1 from "../assets/images/services/cabitnet1.jpeg";
-import img2 from "../assets/images/services/cabitnet3.jpeg";
-import img3 from "../assets/images/services/cabitnet2.jpeg";
+import img1 from "../assets/images/services/cabitnet1.webp";
+import img2 from "../assets/images/services/cabitnet3.webp";
+import img3 from "../assets/images/services/cabitnet2.webp";
+import img4 from "../assets/images/services/ktchen2.webp";
 // Add more as needed
 
-const projectImages = [img1, img2, img3]; // Add all imported images
+const projectImages = [img1, img2, img3, img4]; // Add all imported images
 
 export default function Projects() {
   return (

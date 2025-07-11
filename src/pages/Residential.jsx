@@ -1,5 +1,5 @@
 import React from "react";
-import residentialImage from "../assets/images/services/kitchen1.jpeg";
+import residentialImage from "../assets/images/services/kitchen1.webp";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useRevealOnScroll from "../components/useRevealOnScroll";

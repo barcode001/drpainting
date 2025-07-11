@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import cabinetImage from "../assets/images/services/kitchen4.jpeg";
+import cabinetImage from "../assets/images/services/kitchen4.webp";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 import clientInfo from "../config/clientInfo";
 
