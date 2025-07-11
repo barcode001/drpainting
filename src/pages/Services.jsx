@@ -49,13 +49,7 @@ export default function Services() {
             },
           ].map((service, index) => (
             <div className="service-card" key={index}>
-              <img
-                src={service.image}
-                alt={service.alt}
-                width="400"
-                height="250"
-                loading="lazy"
-              />
+              <img src={service.image} alt={service.alt} loading="lazy" />
               <h3 className="reveal">{service.title}</h3>
               <p className="reveal">{service.description}</p>
               <div className="card-btn reveal">

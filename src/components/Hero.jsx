@@ -24,16 +24,16 @@ export default function Hero() {
             src={heroBg2}
             alt="Painter"
             className="painter"
-            width="1100"
-            height="500"
+            width="600"
+            height="400"
             loading="lazy"
           />
           <img
             src={heroBg}
             alt="Living room background"
             className="hero-bg-image"
-            width="1100"
-            height="500"
+            width="600"
+            height="400"
             loading="lazy"
           />
         </div>
