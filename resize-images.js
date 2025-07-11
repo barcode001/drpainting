@@ -14,8 +14,8 @@ const folders = [
   }
 ];
 
-const maxWidth = 728;
-const maxHeight = 600;
+const maxWidth = 900;
+const maxHeight = 800;
 
 folders.forEach(({ input, output }) => {
   if (!fs.existsSync(output)) {
