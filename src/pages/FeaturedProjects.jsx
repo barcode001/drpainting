@@ -4,14 +4,14 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import img1 from "../assets/images/services/cabitnet1.jpeg";
-import img2 from "../assets/images/services/cabitnet2.jpeg";
-import img3 from "../assets/images/services/cabitnet4.jpeg";
-import img4 from "../assets/images/services/kitchen1.jpeg";
-import img5 from "../assets/images/services/kitchen3.jpeg";
-import img6 from "../assets/images/services/cabinets.jpeg";
-import img7 from "../assets/images/services/kitchen4.jpeg";
-import img8 from "../assets/images/services/home1.jpeg";
+import img1 from "../assets/images/services/cabitnet1.webp";
+import img2 from "../assets/images/services/cabitnet2.webp";
+import img3 from "../assets/images/services/cabitnet4.webp";
+import img4 from "../assets/images/services/kitchen1.webp";
+import img5 from "../assets/images/services/kitchen3.webp";
+import img6 from "../assets/images/services/cabinets.webp";
+import img7 from "../assets/images/services/kitchen4.webp";
+import img8 from "../assets/images/services/home1.webp";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 
 // Replace with actual image paths or import if using Vite
