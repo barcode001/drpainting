@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logoImage from "../assets/images/logo/drpaintinginc-logo.png";
+import logoImage from "../assets/images/logo/drpaintinginc-logo.webp";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
