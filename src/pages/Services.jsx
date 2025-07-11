@@ -8,12 +8,13 @@ import useRevealOnScroll from "../components/useRevealOnScroll";
 
 export default function Services() {
   useRevealOnScroll();
+
   return (
     <section className="services" id="services">
       <div className="container">
         <h2 className="section-title reveal">Our Painting Services</h2>
         <div className="services-grid">
-          <div className="service-card ">
+          <div className="service-card">
             <img
               src={residental}
               alt="Residential Painting"
@@ -30,13 +31,14 @@ export default function Services() {
               <Link
                 to="/services/residential"
                 className="hero-button secondary"
+                aria-label="Learn more about Residential Painting"
               >
                 Learn More
               </Link>
             </div>
           </div>
 
-          <div className="service-card ">
+          <div className="service-card">
             <img
               src={commercial}
               alt="Commercial Painting"
@@ -50,13 +52,17 @@ export default function Services() {
               buildings.
             </p>
             <div className="card-btn reveal">
-              <Link to="/services/commercial" className="hero-button secondary">
+              <Link
+                to="/services/commercial"
+                className="hero-button secondary"
+                aria-label="Learn more about Commercial Painting"
+              >
                 Learn More
               </Link>
             </div>
           </div>
 
-          <div className="service-card ">
+          <div className="service-card">
             <img
               src={cabinets}
               alt="Cabinet Refinishing"
@@ -71,15 +77,16 @@ export default function Services() {
             </p>
             <div className="card-btn reveal">
               <Link
-                to="services/cabinet-refinishing"
+                to="/services/cabinet-refinishing"
                 className="hero-button secondary"
+                aria-label="Learn more about Cabinet Refinishing"
               >
                 Learn More
               </Link>
             </div>
           </div>
 
-          <div className="service-card ">
+          <div className="service-card">
             <img
               src={powerWashing}
               alt="Power Washing"
@@ -96,6 +103,7 @@ export default function Services() {
               <Link
                 to="/services/power-washing"
                 className="hero-button secondary"
+                aria-label="Learn more about Power Washing"
               >
                 Learn More
               </Link>
