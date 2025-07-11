@@ -13,8 +13,8 @@ const clientInfo = {
     address: "" // Mobile-based service; no physical storefront
   },
   social: {
-    instagram: "",
-    facebook: "",
+    instagram: "https://www.instagram.com/d.r.painting.inc",
+    facebook: "https://www.facebook.com/people/DR-Painting-Inc/61562794095060/",
     tiktok: ""
   },
   googleAnalyticsID: ""

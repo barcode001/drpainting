@@ -48,14 +48,6 @@
       height: 100%;
       object-fit: cover;
     }
-
-    @media (min-width: rem(430)) {
-      height: none;
-      img {
-        height: 65px;
-        width: 70px;
-      }
-    }
   }
 
   .menu-toggle {
