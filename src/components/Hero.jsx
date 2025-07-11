@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import clientInfo from "../config/clientInfo";
-import heroBg from "../assets/images/hero/hero2.png"; // Fallback image
-import heroBg2 from "../assets/images/hero/hero-person1.png"; // Fallback image
+import heroBg from "../assets/images/hero/hero2.webp"; // Fallback image
+import heroBg2 from "../assets/images/hero/hero-person1.webp"; // Fallback image
 
 const bgColors = ["#f4c430", "#ff6f61", "#6ec1e4", "#81c784", "#f8b195"];
 
