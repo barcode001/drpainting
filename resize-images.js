@@ -3,8 +3,9 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 
-const inputDir = "./dist/assets";
-const outputDir = "./dist/assets/optimized";
+const inputDir = "./src/assets/images/services"; // source images
+const outputDir = "./src/assets/images/services-optimized"; // safe new folder
+
 const maxWidth = 728;
 const maxHeight = 970;
 
