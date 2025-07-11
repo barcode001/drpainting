@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import washingImage from "../assets/images/services/residental.webp"; // Confirm the correct path
+import washingImage from "../assets/images/services-optimized/residental.webp"; // Confirm the correct path
 import useRevealOnScroll from "../components/useRevealOnScroll";
 
 export default function PowerWashing() {

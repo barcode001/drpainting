@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import residental from "../assets/images/services/residental1.webp";
-import commercial from "../assets/images/services/comercial.webp";
-import cabinets from "../assets/images/services/cabinets.webp";
-import powerWashing from "../assets/images/services/residental.webp";
+import residental from "../assets/images/services-optimized/residental1.webp";
+import commercial from "../assets/images/services-optimized/comercial.webp";
+import cabinets from "../assets/images/services-optimized/cabinets.webp";
+import powerWashing from "../assets/images/services-optimized/residental.webp";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 
 export default function Services() {

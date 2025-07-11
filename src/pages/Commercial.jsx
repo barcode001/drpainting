@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import commercialImage from "../assets/images/services/comercial1.webp";
+import commercialImage from "../assets/images/services-optimized/comercial1.webp";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 import clientInfo from "../config/clientInfo";
 

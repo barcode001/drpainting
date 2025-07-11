@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import img1 from "../assets/images/services/cabitnet1.webp";
-import img2 from "../assets/images/services/cabitnet3.webp";
-import img3 from "../assets/images/services/cabitnet2.webp";
-import img4 from "../assets/images/services/ktchen2.webp";
+import img1 from "../assets/images/services-optimized/cabitnet1.webp";
+import img2 from "../assets/images/services-optimized/cabitnet3.webp";
+import img3 from "../assets/images/services-optimized/cabitnet2.webp";
+import img4 from "../assets/images/services-optimized/ktchen2.webp";
 // Add more as needed
 
 const projectImages = [img1, img2, img3, img4]; // Add all imported images
