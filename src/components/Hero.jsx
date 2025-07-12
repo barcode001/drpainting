@@ -103,11 +103,10 @@ export default function Hero() {
         </div>
 
         <div className="card-content">
-          <h1>Bring Color to Your World</h1>
-          <p>
-            Expert residential & commercial painting services in Triangle Area
-            Raleigh-Durham, NC
-          </p>
+          <h1>
+            Residential & Commercial Painting <br /> in Raleigh-Durham, NC
+          </h1>
+          <p className="hero-tagline">Bring Color to Your World</p>
 
           <div className="buttons">
             <Link

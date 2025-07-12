@@ -71,18 +71,19 @@
       padding-right: rem(5);
 
       h1 {
-        font-size: 1.75rem;
+        font-size: clamp(rem(8), 5vw, rem(32));
+
         margin-bottom: 0.5rem;
         font-weight: 700;
         color: #222;
         text-wrap: nowrap;
       }
 
-      p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-        color: #555;
-        text-wrap: balance;
+      .hero-tagline {
+        // font-size: 1.2rem; // ~16px
+        font-size: clamp(rem(16), 5vw, rem(22));
+        color: #666;
+        font-weight: 400;
       }
 
       .buttons {
