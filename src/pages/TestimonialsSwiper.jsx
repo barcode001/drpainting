@@ -55,12 +55,12 @@ export default function TestimonialsSwiper() {
       </div>
       <div className="center-button reveal">
         <a
-          href="https://www.google.com/maps/place/D%26R+Painting+Inc./@35.1463957,-82.4992745,7z/data=!4m18!1m9!3m8!1s0x51564a97b7d7a1b:0x6080139c1312dbc8!2sD%26R+Painting+Inc.!8m2!3d35.1705075!4d-79.86097!9m1!1b1!16s%2Fg%2F11lf35j792!3m7!1s0x51564a97b7d7a1b:0x6080139c1312dbc8!8m2!3d35.1705075!4d-79.86097!9m1!1b1!16s%2Fg%2F11lf35j792?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+          href="https://g.page/r/CcjbEhOcE4BgEAE/review"
           className="hero-button primary"
           target="_blank"
           rel="noopener noreferrer"
         >
-          See All Google Reviews
+          Leave a Reviews
         </a>
       </div>
     </section>
