@@ -61,7 +61,7 @@ export default function TestimonialsSwiper() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Leave a Reviews
+          Leave a Review
         </a>
       </div>
     </section>
