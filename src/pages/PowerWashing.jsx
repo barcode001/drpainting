@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import washingImage from "../assets/images/services-optimized/residental.webp"; // Confirm the correct path
 import useRevealOnScroll from "../components/useRevealOnScroll";
+import ServiceAreas from "./ServiceAreas";
 
 export default function PowerWashing() {
   useRevealOnScroll();
@@ -52,6 +53,7 @@ export default function PowerWashing() {
           </Link>
         </div>
       </section>
+      <ServiceAreas />
     </>
   );
 }

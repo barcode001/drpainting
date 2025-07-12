@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import commercialImage from "../assets/images/services-optimized/comercial1.webp";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 import clientInfo from "../config/clientInfo";
+import ServiceAreas from "./ServiceAreas";
 
 export default function Commercial() {
   useRevealOnScroll();
@@ -109,6 +110,7 @@ export default function Commercial() {
           </Link>
         </div>
       </section>
+      <ServiceAreas />
     </>
   );
 }

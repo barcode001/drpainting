@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import clientInfo from "../config/clientInfo";
 import useRevealOnScroll from "../components/useRevealOnScroll";
+import ServiceAreas from "./ServiceAreas";
 // import aboutImage from "../assets/images/services/residental.jpeg";
 
 export default function About() {
@@ -144,6 +145,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <ServiceAreas />
     </>
   );
 }

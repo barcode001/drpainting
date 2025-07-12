@@ -3,6 +3,7 @@ import residentialImage from "../assets/images/services-optimized/kitchen1.webp"
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useRevealOnScroll from "../components/useRevealOnScroll";
+import ServiceAreas from "./ServiceAreas";
 
 export default function Residential() {
   useRevealOnScroll();
@@ -60,6 +61,7 @@ export default function Residential() {
           </div>
         </div>
       </section>
+      <ServiceAreas />
     </>
   );
 }

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { sendEmail } from "../utils/sendEmail";
 import clientInfo from "../config/clientInfo";
+import ServiceAreas from "./ServiceAreas";
 
 function Contact() {
   const form = useRef();
@@ -160,10 +161,20 @@ function Contact() {
                 <strong>Service Area:</strong> {clientInfo.location.city},{" "}
                 {clientInfo.location.state}
               </p>
+              <p>
+                <strong>Business Hours:</strong>
+                <br />
+                Monday – Friday: 8:00 AM – 5:00 PM
+                <br />
+                Saturday: 8:00 AM – 12:00 PM
+                <br />
+                Sunday: Closed
+              </p>
             </div>
           </div>
         </div>
       </section>
+      <ServiceAreas />
     </>
   );
 }

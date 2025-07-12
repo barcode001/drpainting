@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import cabinetImage from "../assets/images/services-optimized/kitchen4.webp";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 import clientInfo from "../config/clientInfo";
+import ServiceAreas from "./ServiceAreas";
 
 export default function CabinetRefinishing() {
   useRevealOnScroll();
@@ -109,6 +110,7 @@ export default function CabinetRefinishing() {
           </Link>
         </div>
       </section>
+      <ServiceAreas />
     </>
   );
 }
