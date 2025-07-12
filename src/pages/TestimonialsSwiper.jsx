@@ -53,6 +53,7 @@ export default function TestimonialsSwiper() {
           ))}
         </Swiper>
       </div>
+      {/* Google Review Button */}
       <div className="center-button reveal">
         <a
           href="https://g.page/r/CcjbEhOcE4BgEAE/review"
