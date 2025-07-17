@@ -16,6 +16,16 @@
 //     setSending(true);
 //     setError(null);
 
+//     // 💡 Check honeypot field before sending
+//     const formData = new FormData(form.current);
+//     const honeypot = formData.get("website");
+
+//     if (honeypot) {
+//       console.warn("Bot submission detected — blocked.");
+//       setSending(false);
+//       return;
+//     }
+
 //     sendEmail(form)
 //       .then(() => {
 //         setSending(false);
@@ -132,6 +142,14 @@
 //                 required
 //               ></textarea>
 
+//               {/* 🕵️‍♂️ Honeypot Field */}
+//               <input
+//                 type="text"
+//                 name="website"
+//                 style={{ display: "none" }}
+//                 autoComplete="off"
+//               />
+
 //               {/* Hidden time field for EmailJS template */}
 //               <input
 //                 type="hidden"
@@ -149,6 +167,7 @@
 
 //               {error && <p className="form-error">{error}</p>}
 //             </form>
+
 //             <div className="contact-info">
 //               <h3>Contact Info</h3>
 //               <p>
@@ -181,7 +200,7 @@
 
 // export default Contact;
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { sendEmail } from "../utils/sendEmail";
@@ -193,18 +212,27 @@ function Contact() {
   const navigate = useNavigate();
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(null);
+  const [formLoadTime] = useState(Date.now()); // 🕒 Bot detection
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSending(true);
     setError(null);
 
-    // 💡 Check honeypot field before sending
     const formData = new FormData(form.current);
-    const honeypot = formData.get("website");
 
+    // 🕵️‍♂️ Honeypot trap (renamed to mislead bots)
+    const honeypot = formData.get("preferredColor");
     if (honeypot) {
-      console.warn("Bot submission detected — blocked.");
+      console.warn("Bot submission detected — honeypot triggered.");
+      setSending(false);
+      return;
+    }
+
+    // ⏱️ Time-based bot detection
+    const timeSinceLoad = Date.now() - formLoadTime;
+    if (timeSinceLoad < 2000) {
+      console.warn("Form submitted too quickly — likely a bot.");
       setSending(false);
       return;
     }
@@ -325,15 +353,16 @@ function Contact() {
                 required
               ></textarea>
 
-              {/* 🕵️‍♂️ Honeypot Field */}
+              {/* 🕵️‍♂️ Updated Honeypot Field */}
               <input
                 type="text"
-                name="website"
-                style={{ display: "none" }}
+                name="preferredColor"
                 autoComplete="off"
+                tabIndex="-1"
+                style={{ position: "absolute", left: "-9999px" }}
               />
 
-              {/* Hidden time field for EmailJS template */}
+              {/* ⏱️ Submission Timestamp (for EmailJS or logs) */}
               <input
                 type="hidden"
                 name="time"
