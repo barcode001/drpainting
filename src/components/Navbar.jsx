@@ -164,7 +164,7 @@ export default function Navbar() {
           {/* Services dropdown */}
           <li className="dropdown">
             <HashLink smooth to="/#services" onClick={handleLinkClick}>
-              Services
+              Services ▾
             </HashLink>
             <ul className="dropdown-menu">
               <li>
