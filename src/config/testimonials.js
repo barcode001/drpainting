@@ -1,4 +1,18 @@
 const testimonials = [
+    {
+    name: "Mary Rexroad",
+    city: "",
+    rating: 5,
+    quote: "I highly recommend D&S they due quality work. They are very professional on time and clean up each day.  ",
+    url: "https://maps.app.goo.gl/yh7PQybL76SZTRLK6" // 🔁 replace with real review URL
+  },
+    {
+    name: "Kelley",
+    city: "",
+    rating: 5,
+    quote: "I could not have hired a better company for my painting needs! They were professional and showed up on time... ",
+    url: "https://maps.app.goo.gl/S8fL79nmdPZ7vmpp8" // 🔁 replace with real review URL
+  },
   {
     name: "Allison Iudica",
     city: "",
