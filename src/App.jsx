@@ -20,6 +20,12 @@ function App() {
     <>
       <ScrollToTop />
       <div className="page-wrapper">
+        <div className="dr-bg">
+          <div className="dr-orb dr-orb--a" />
+          <div className="dr-orb dr-orb--b" />
+        </div>
+        <div className="dr-icons" />
+
         <Navbar />
         <main>
           <Routes>

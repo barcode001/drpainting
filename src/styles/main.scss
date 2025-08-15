@@ -81,3 +81,58 @@ body {
   border: 0;
   white-space: nowrap;
 }
+
+:root {
+  --dr-bg-1: #ffffff;
+  --dr-bg-2: #fdfaf7; /* warm white */
+  --dr-accent: #d6a827; /* gold */
+  --dr-accent-2: #2e2e2e; /* charcoal */
+  --dr-orb-a: 255, 255, 255;
+  --dr-orb-b: 214, 168, 39;
+  --dr-blur: 50px;
+  --dr-opacity: 0.05;
+}
+
+.dr-icons {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-size: 220px 220px;
+  background-repeat: repeat;
+  animation: dr-icon-drift 80s linear infinite;
+
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220' fill='none' stroke='%23d6a827' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'>\
+  <!-- triangle -->\
+  <path d='M30 60 L60 100 L0 100 Z'/>\
+  <!-- paint roller (right-handed) -->\
+  <rect x='100' y='34' width='44' height='12' rx='6'/>\
+  <path d='M144 40 h8 v14'/>\
+  <line x1='152' y1='54' x2='152' y2='82' stroke-width='3'/>\
+  <circle cx='98' cy='40' r='1.8'/>\
+  <!-- bee (shifted to right side of roller) -->\
+  <circle cx='180' cy='40' r='5'/>\
+  <path d='M174 40 l-6 -5 M186 40 l6 -5'/>\
+  <path d='M170 40 h20'/>\
+  <path d='M175 45 h10'/>\
+</svg>");
+}
+
+@keyframes dr-icon-drift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 20%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.dr-icons {
+  // background-color: rgba(255, 0, 0, 0.03); // test tint
+  opacity: 0.2;
+  z-index: -1;
+}
