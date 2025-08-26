@@ -9,7 +9,7 @@ const clientInfo = {
   },
   contact: {
     phone: "(919) 519-1699",
-    email: "paintingdr07@gmail.com",
+    email: "dulce@drpaintinginc.com",
     address: "" // Mobile-based service; no physical storefront
   },
   social: {
