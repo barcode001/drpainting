@@ -237,7 +237,7 @@
 import React, { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
-import { sendEmail } from "../utils/sendEmail"; // ← uses env + passes captcha
+import { sendEmail } from "../utils/sendEmail";
 import clientInfo from "../config/clientInfo";
 import ServiceAreas from "./ServiceAreas";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -249,7 +249,7 @@ function Contact() {
   const navigate = useNavigate();
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(null);
-  const [formLoadTime] = useState(Date.now()); // 🕒 Bot detection
+  const [formLoadTime] = useState(Date.now());
 
   const pageUrl = "https://www.drpaintinginc.com/contact";
 
@@ -278,7 +278,6 @@ function Contact() {
 
     const formData = new FormData(form.current);
 
-    // 🕵️‍♂️ Honeypot trap (keep exact field so CSS/layout unchanged)
     const honeypot = formData.get("preferredColor");
     if (honeypot) {
       console.warn("Bot submission detected — honeypot triggered.");
@@ -286,7 +285,6 @@ function Contact() {
       return;
     }
 
-    // ⏱️ Time-based bot detection
     const timeSinceLoad = Date.now() - formLoadTime;
     if (timeSinceLoad < 2000) {
       console.warn("Form submitted too quickly — likely a bot.");
@@ -302,7 +300,6 @@ function Contact() {
     }
 
     try {
-      // ⬇️ now passes captchaToken to EmailJS via hidden input
       await sendEmail(form, captchaToken);
       setSending(false);
       navigate("/thank-you");
@@ -328,7 +325,6 @@ function Contact() {
         />
         <link rel="canonical" href={pageUrl} />
 
-        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -344,7 +340,6 @@ function Contact() {
           content="https://www.drpaintinginc.com/logo.jpg"
         />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -359,7 +354,6 @@ function Contact() {
           content="https://www.drpaintinginc.com/logo.jpg"
         />
 
-        {/* Schema Markup */}
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
 
@@ -406,7 +400,6 @@ function Contact() {
                 required
               ></textarea>
 
-              {/* 🕵️‍♂️ Honeypot (kept minimal to avoid layout shifts) */}
               <input
                 type="text"
                 name="preferredColor"
@@ -415,19 +408,22 @@ function Contact() {
                 style={{ position: "absolute", left: "-9999px" }}
               />
 
-              {/* ⏱️ Submission Timestamp (optional) */}
               <input
                 type="hidden"
                 name="time"
                 value={new Date().toLocaleString()}
               />
 
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} // ← from env
-                onChange={(token) => setCaptchaToken(token)}
-                className="recaptcha"
-              />
+              {import.meta.env.VITE_RECAPTCHA_SITE_KEY ? (
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={(token) => setCaptchaToken(token)}
+                  className="recaptcha"
+                />
+              ) : (
+                <p className="form-error">reCAPTCHA not configured</p>
+              )}
 
               <button
                 type="submit"

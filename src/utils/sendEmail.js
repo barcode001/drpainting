@@ -23,7 +23,7 @@ export function sendEmail(formRef, captchaToken) {
     throw new Error("Missing EmailJS environment variables");
   }
 
-  // Add captcha token field before sending
+  // Ensure captcha token is passed
   const formEl = formRef.current ?? formRef;
   let recaptchaInput = formEl.querySelector('input[name="g-recaptcha-response"]');
   if (!recaptchaInput) {
