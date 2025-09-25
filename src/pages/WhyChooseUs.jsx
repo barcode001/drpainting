@@ -7,7 +7,7 @@ const benefits = [
     icon: <FaCheckCircle />,
     title: "Precision Workmanship",
     description:
-      "Every stroke matters. We deliver clean, crisp, high-quality finishes.",
+      "Every stroke matters. We deliver clean, crisp, high quality finishes.",
   },
   {
     icon: <FaClock />,
@@ -17,7 +17,7 @@ const benefits = [
   {
     icon: <FaSmile />,
     title: "Satisfaction Guaranteed",
-    description: "We’re not happy until you are — simple as that.",
+    description: "We’re not happy until you are simple as that.",
   },
   {
     icon: <FaBroom />,

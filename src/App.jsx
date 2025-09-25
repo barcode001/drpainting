@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+
 import Services from "./pages/Services";
 import About from "./pages/About";
 import ThankYou from "./pages/ThankYou";
@@ -14,6 +15,7 @@ import Residential from "./pages/Residential";
 import Commercial from "./pages/Commercial";
 import CabinetRefinishing from "./pages/CabinetRefinishing";
 import PowerWashing from "./pages/PowerWashing";
+import HollySpringsHome from "./pages/HollySpringsHome";
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/thank-you" element={<ThankYou />} />
@@ -43,6 +46,10 @@ function App() {
             />
             <Route path="/services/power-washing" element={<PowerWashing />} />
             <Route path="*" element={<NotFound />} />
+            <Route
+              path="/holly-springs-painting-company"
+              element={<HollySpringsHome />}
+            />
           </Routes>
         </main>
         <Footer />
