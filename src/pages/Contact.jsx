@@ -15,7 +15,7 @@ function Contact() {
   const [error, setError] = useState(null);
   const [formLoadTime] = useState(Date.now());
 
-  const pageUrl = "https://www.drpaintinginc.com/contact";
+  const pageUrl = "https://drpaintinginc.com/contact";
 
   const schemaData = {
     "@context": "https://schema.org",
