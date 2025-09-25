@@ -38,28 +38,34 @@ export default function Commercial() {
         </title>
         <meta
           name="description"
-          content="Top-rated commercial painting in Raleigh-Durham & surrounding areas. We paint offices, retail spaces, apartments & more with professional results."
+          content="Top-rated commercial painting in Raleigh, Cary, Apex & the Triangle area. Offices, retail spaces, apartments & more with professional results."
         />
         <meta
           name="keywords"
-          content="Commercial Painting Raleigh, Office Painting Durham, Business Painter NC, Storefront Painting, D&R Painting Inc, Triangle Area Painters"
+          content="Commercial Painting Raleigh, Office Painting Durham, Business Painter NC, Storefront Painting, Triangle Area Painters"
         />
-        <link rel="canonical" href={pageUrl} />
+        <link
+          rel="canonical"
+          href="https://drpaintinginc.com/services/commercial"
+        />
 
         {/* Open Graph */}
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="Commercial Painting | Offices, Stores & Buildings | D&R Painting Inc."
         />
         <meta
           property="og:description"
-          content="We provide professional commercial painting services in Raleigh-Durham, Cary & Triangle area. Offices, retail spaces, restaurants and more."
+          content="Professional commercial painting services in Raleigh, Cary & Apex. Offices, restaurants, retail & more. Family-owned since 2005."
         />
-        <meta property="og:url" content={pageUrl} />
+        <meta
+          property="og:url"
+          content="https://drpaintinginc.com/services/commercial"
+        />
         <meta
           property="og:image"
-          content="https://www.drpaintinginc.com/logo.jpg"
+          content="https://drpaintinginc.com/assets/images/services-optimized/comercial1.webp"
         />
 
         {/* Twitter */}
@@ -70,17 +76,16 @@ export default function Commercial() {
         />
         <meta
           name="twitter:description"
-          content="Top-tier commercial painting for NC businesses. Boost your space's look with D&R Painting Inc."
+          content="Top-tier commercial painting for Raleigh-Durham businesses. Boost your space's look with D&R Painting Inc."
         />
         <meta
           name="twitter:image"
-          content="https://www.drpaintinginc.com/logo.jpg"
+          content="https://drpaintinginc.com/assets/images/services-optimized/comercial1.webp"
         />
 
         {/* Schema */}
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
-
       <section className="service-detail">
         <div className="container">
           <h1 className="reveal">Commercial Painting</h1>

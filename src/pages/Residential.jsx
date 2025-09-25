@@ -15,15 +15,49 @@ export default function Residential() {
         </title>
         <meta
           name="description"
-          content="Transform your home with expert residential painting services in Raleigh, Cary, and the Triangle area. We offer interior and exterior house painting with care, precision, and long-lasting results."
+          content="Transform your home with expert residential painting services in Raleigh, Cary, Apex & the Triangle area. Interior & exterior painting with care, precision & lasting results."
         />
         <meta
           name="keywords"
-          content="residential painting Raleigh, house painters Cary, interior painting Triangle, exterior home painting NC, painting company Raleigh, trusted painters near me"
+          content="residential painting Raleigh, house painters Cary, interior painting Triangle, exterior home painting NC, painting company Raleigh"
         />
         <link
           rel="canonical"
-          href="https://www.drpaintinginc.com/services/residential"
+          href="https://drpaintinginc.com/services/residential"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Residential Painting Raleigh, Cary & Apex | D&R Painting Inc."
+        />
+        <meta
+          property="og:description"
+          content="Interior & exterior residential painting services across Raleigh, Cary & Apex. Family-owned since 2005. Free quotes available."
+        />
+        <meta
+          property="og:url"
+          content="https://drpaintinginc.com/services/residential"
+        />
+        <meta
+          property="og:image"
+          content="https://drpaintinginc.com/og-image.jpg"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Residential Painting Raleigh, Cary & Apex | D&R Painting Inc."
+        />
+        <meta
+          name="twitter:description"
+          content="Expert residential house painting in Raleigh, Cary & Apex. Interior, exterior & cabinet refinishing with care and precision."
+        />
+        <meta
+          name="twitter:image"
+          content="https://drpaintinginc.com/og-image.jpg"
         />
       </Helmet>
       <section className="service-detail">

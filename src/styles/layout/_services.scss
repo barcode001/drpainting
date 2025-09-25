@@ -131,3 +131,31 @@
     }
   }
 }
+
+.service-detail ul {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none; /* remove default bullets */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; /* center align */
+  justify-self: center;
+}
+
+.service-detail ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.service-detail ul li::before {
+  content: "✔";
+  margin-right: 0.75rem;
+  color: #2e7d32; /* green accent, can swap to brand color */
+  font-weight: bold;
+  font-size: 1rem;
+  flex-shrink: 0;
+}

@@ -38,43 +38,49 @@ export default function CabinetRefinishing() {
         </title>
         <meta
           name="description"
-          content="Transform your kitchen or bathroom with professional cabinet refinishing. Serving Raleigh, Durham, Cary & nearby. Modern, durable finishes at great prices."
+          content="Transform your kitchen or bathroom with professional cabinet refinishing in Raleigh, Cary & Apex. Modern, durable finishes at affordable prices."
         />
         <meta
           name="keywords"
-          content="Cabinet Refinishing Raleigh, Kitchen Cabinet Painting NC, Cabinet Painters Triangle, D&R Painting Inc, Cabinet Makeover, Bathroom Cabinets"
+          content="Cabinet Refinishing Raleigh, Kitchen Cabinet Painting NC, Cabinet Painters Cary, Bathroom Cabinet Makeover, Triangle Area Cabinet Painting"
         />
-        <link rel="canonical" href={pageUrl} />
+        <link
+          rel="canonical"
+          href="https://drpaintinginc.com/services/cabinet-refinishing"
+        />
 
         {/* Open Graph */}
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="Cabinet Refinishing | Kitchen Cabinet Painting | D&R Painting Inc."
         />
         <meta
           property="og:description"
-          content="Professional cabinet refinishing for kitchens and bathrooms in Raleigh-Durham. Update your cabinets with smooth, modern finishes today."
+          content="Professional cabinet refinishing for kitchens & bathrooms in Raleigh, Cary & Apex. Update your cabinets with smooth, modern finishes."
         />
-        <meta property="og:url" content={pageUrl} />
+        <meta
+          property="og:url"
+          content="https://drpaintinginc.com/services/cabinet-refinishing"
+        />
         <meta
           property="og:image"
-          content="https://www.drpaintinginc.com/logo.jpg"
+          content="https://drpaintinginc.com/assets/images/services-optimized/kitchen4.webp"
         />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Cabinet Refinishing | Kitchen Cabinet Painting | D&R Painting Inc."
+          content="Cabinet Refinishing Raleigh, Cary & Apex | Kitchen Cabinet Painting | D&R Painting Inc."
         />
         <meta
           name="twitter:description"
-          content="Cabinet refinishing experts in the Triangle area. Let D&R Painting Inc. give your kitchen a fresh look at an affordable price."
+          content="Cabinet refinishing experts in the Triangle. Let D&R Painting Inc. give your kitchen or bathroom cabinets a fresh look at an affordable price."
         />
         <meta
           name="twitter:image"
-          content="https://www.drpaintinginc.com/logo.jpg"
+          content="https://drpaintinginc.com/assets/images/services-optimized/kitchen4.webp"
         />
 
         {/* Schema */}

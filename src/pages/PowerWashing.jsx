@@ -7,23 +7,74 @@ import ServiceAreas from "./ServiceAreas";
 
 export default function PowerWashing() {
   useRevealOnScroll();
+
+  const pageUrl = "https://drpaintinginc.com/services/power-washing";
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "PaintingService",
+    name: "D&R Painting Inc.",
+    url: pageUrl,
+    serviceType: "Power Washing",
+    areaServed: [
+      { "@type": "Place", name: "Raleigh NC" },
+      { "@type": "Place", name: "Cary NC" },
+      { "@type": "Place", name: "Apex NC" },
+    ],
+    telephone: "(919) 519-1699",
+    description:
+      "Professional power washing for siding, driveways, decks and fences in the Triangle area.",
+  };
+
   return (
     <>
       <Helmet>
-        <title>Power Washing in Raleigh-Durham | D&R Painting Inc.</title>
+        <title>Power Washing Raleigh, Cary & Apex | D&R Painting Inc.</title>
         <meta
           name="description"
-          content="Revive your home's exterior with expert power washing from D&R Painting Inc. Serving Raleigh, Cary, Apex & surrounding areas. Schedule your free estimate today!"
+          content="Revive siding, driveways, decks & fences with professional power washing. Serving Raleigh, Cary & Apex. Safe, effective, commercial-grade results."
         />
         <meta
           name="keywords"
-          content="Power Washing Raleigh, House Washing Cary NC, Pressure Cleaning Apex, Exterior Cleaning Services, D&R Painting Inc."
+          content="power washing Raleigh, pressure washing Cary, house washing Apex"
         />
-        <link
-          rel="canonical"
-          href="https://www.drpaintinginc.com/services/power-washing"
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Power Washing Raleigh, Cary & Apex | D&R Painting Inc."
         />
+        <meta
+          property="og:description"
+          content="Professional power washing for homes & businesses in the Triangle. Siding, driveways, decks & fences."
+        />
+        <meta property="og:url" content={pageUrl} />
+        <meta
+          property="og:image"
+          content="https://drpaintinginc.com/assets/images/services-optimized/power-washing.webp"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Power Washing Raleigh, Cary & Apex | D&R Painting Inc."
+        />
+        <meta
+          name="twitter:description"
+          content="Revive exterior surfaces with safe, effective power washing. Free estimates."
+        />
+        <meta
+          name="twitter:image"
+          content="https://drpaintinginc.com/assets/images/services-optimized/power-washing.webp"
+        />
+
+        {/* Schema */}
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
+
       <section className="service-detail">
         <div className="container">
           <h1 className="reveal">Power Washing</h1>
@@ -36,7 +87,7 @@ export default function PowerWashing() {
 
           <img
             src={washingImage}
-            alt="Power washing exterior surface"
+            alt="Power washing siding to remove dirt and mildew"
             className="reveal"
             loading="lazy"
           />
@@ -48,7 +99,16 @@ export default function PowerWashing() {
             material for safe, effective results.
           </p>
 
-          <Link to="/contact" className="hero-button primary ">
+          <h2 className="reveal">What We Power Wash</h2>
+          <ul className="reveal">
+            <li>Siding & brick exteriors</li>
+            <li>Driveways & sidewalks</li>
+            <li>Decks & patios</li>
+            <li>Fences & outdoor structures</li>
+            <li>Surface prep before painting</li>
+          </ul>
+
+          <Link to="/contact" className="hero-button primary reveal">
             Request a Power Wash
           </Link>
         </div>

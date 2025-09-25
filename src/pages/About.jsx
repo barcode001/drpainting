@@ -11,23 +11,26 @@ export default function About() {
 
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "PaintingService",
-    name: clientInfo.businessName,
-    url: "https://www.drpaintinginc.com/about",
-    telephone: clientInfo.contact.phone,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: clientInfo.location.city,
-      addressRegion: clientInfo.location.state,
-      addressCountry: "US",
+    "@type": "AboutPage",
+    mainEntity: {
+      "@type": "PaintingService",
+      name: clientInfo.businessName,
+      url: "https://drpaintinginc.com/about",
+      telephone: clientInfo.contact.phone,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: clientInfo.location.city,
+        addressRegion: clientInfo.location.state,
+        addressCountry: "US",
+      },
+      description:
+        "Meet Dulce and Ricardo, the family behind D&R Painting Inc.—serving Raleigh-Durham since 2005 with expert residential and commercial painting.",
+      founder: [
+        { "@type": "Person", name: "Dulce" },
+        { "@type": "Person", name: "Ricardo" },
+      ],
+      foundingDate: "2005",
     },
-    description:
-      "Meet Dulce and Ricardo, the family behind D&R Painting Inc.—serving Raleigh-Durham since 2005 with expert residential and commercial painting.",
-    founder: {
-      "@type": "Person",
-      name: "Dulce & Ricardo",
-    },
-    foundingDate: "2005",
   };
 
   return (
@@ -44,7 +47,7 @@ export default function About() {
           name="keywords"
           content="About D&R Painting, Raleigh painters, Cary painting company, Apex NC painters, Triangle area painting, family-owned painters, Dulce and Ricardo"
         />
-        <link rel="canonical" href="https://www.drpaintinginc.com/about" />
+        <link rel="canonical" href="https://drpaintinginc.com/about" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
@@ -56,10 +59,10 @@ export default function About() {
           property="og:description"
           content="Learn the story of Dulce & Ricardo and how they built D&R Painting Inc. to serve Raleigh, Cary & the Triangle area with honest, quality work."
         />
-        <meta property="og:url" content="https://www.drpaintinginc.com/about" />
+        <meta property="og:url" content="https://drpaintinginc.com/about" />
         <meta
           property="og:image"
-          content="https://www.drpaintinginc.com/logo.jpg"
+          content="https://drpaintinginc.com/og-image.jpg"
         />
 
         {/* Twitter */}
@@ -74,7 +77,7 @@ export default function About() {
         />
         <meta
           name="twitter:image"
-          content="https://www.drpaintinginc.com/logo.jpg"
+          content="https://drpaintinginc.com/og-image.jpg"
         />
 
         {/* Schema.org */}
