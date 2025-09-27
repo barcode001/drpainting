@@ -188,7 +188,7 @@ export default function Navbar() {
   const logoPath = basePath ? `${basePath}-painting-company` : "/";
   const aboutPath = basePath ? `${basePath}/about` : "/about";
   const contactPath = basePath ? `${basePath}/contact` : "/contact";
-
+  const projectsPath = basePath ? `${basePath}/projects` : "/projects";
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -275,6 +275,11 @@ export default function Navbar() {
       </Link>
     </li> */}
             </ul>
+          </li>
+          <li>
+            <Link to={projectsPath} onClick={handleLinkClick}>
+              Portfolio
+            </Link>
           </li>
           <li>
             <Link to={contactPath} onClick={handleLinkClick}>

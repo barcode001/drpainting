@@ -62,16 +62,17 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import clientInfo from "../config/clientInfo";
 import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   const year = new Date().getFullYear();
   const location = useLocation();
 
-  // detect which location page user is on
-  const isHollySprings = location.pathname.startsWith("/holly-springs");
-  const isCary = location.pathname.startsWith("/cary");
+  // detect location from current path
+  const pathname = location.pathname;
+
+  const isHollySprings = pathname.includes("/holly-springs");
+  const isCary = pathname.includes("/cary");
 
   // dynamic base path
   const basePath = isHollySprings ? "/holly-springs" : isCary ? "/cary" : "";
@@ -82,8 +83,9 @@ export default function Footer() {
     : "/#services";
   const aboutPath = basePath ? `${basePath}/about` : "/about";
   const contactPath = basePath ? `${basePath}/contact` : "/contact";
-  const projectsPath = basePath ? `${basePath}/projects` : "/projects";
 
+  // ✅ Portfolio stays global
+  const projectsPath = basePath ? `${basePath}/projects` : "/projects";
   return (
     <footer className="footer">
       <div className="footer-inner">

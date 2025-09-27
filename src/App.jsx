@@ -51,6 +51,8 @@ function App() {
             <Route path="/services/power-washing" element={<PowerWashing />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+
+            <Route path="/:location/projects" element={<Projects />} />
             <Route path="*" element={<NotFound />} />
             <Route
               path="/holly-springs-painting-company"
