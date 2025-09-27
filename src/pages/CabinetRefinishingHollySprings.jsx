@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import cabinetImage from "../assets/images/services-optimized/cabinet-refinishing-holly-springs.JPG";
+import cabinetImage from "../assets/images/services-optimized/cabinet-refinishing-holly-springs.webp";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 import ServiceAreas from "./ServiceAreas";
 

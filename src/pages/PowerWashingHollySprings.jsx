@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import washingImage from "../assets/images/services-optimized/power-washing-holly-springs.jpg";
+import washingImage from "../assets/images/services-optimized/power-washing-holly-springs.webp";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 import ServiceAreas from "./ServiceAreas";
 

@@ -1,8 +1,8 @@
 // src/config/servicesData.js
-import residentialImg from "../assets/images/services-optimized/residential-holly-springs.JPG";
-import commercialImg from "../assets/images/services-optimized/comercial-holly-springs.JPG";
-import cabinetsImg from "../assets/images/services-optimized/cabinet-holly-springs.JPG";
-import powerWashingImg from "../assets/images/services-optimized/power-washing-holly-springs.jpg"; 
+import residentialImg from "../assets/images/services-optimized/residential-holly-springs.webp";
+import commercialImg from "../assets/images/services-optimized/comercial-holly-springs.webp";
+import cabinetsImg from "../assets/images/services-optimized/cabinet-holly-springs.webp";
+import powerWashingImg from "../assets/images/services-optimized/power-washing-holly-springs.webp"; 
 // ⚠️ replace with correct power washing image later
 
 const baseServices = {

@@ -1,5 +1,5 @@
 import React from "react";
-import residentialImage from "../assets/images/services-optimized/residentialpaining-holly-springs.JPG";
+import residentialImage from "../assets/images/services-optimized/residentialpaining-holly-springs.webp";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useRevealOnScroll from "../components/useRevealOnScroll";

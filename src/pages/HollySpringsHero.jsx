@@ -1,6 +1,6 @@
 import React from "react";
 import clientInfo from "../config/clientInfo";
-import hollySpringsHero from "../assets/images/holly-springs/holly-springs/holly-springs-city.png";
+import hollySpringsHero from "../assets/images/holly-springs/holly-springs/holly-springs-city.webp";
 export default function HollySpringsHero() {
   const rawPhone = clientInfo?.contact?.phone || "";
   const tel = `tel:${rawPhone.replace(/\D/g, "")}`;
