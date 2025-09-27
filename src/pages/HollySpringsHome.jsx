@@ -68,7 +68,7 @@ export default function HollySpringsHome() {
         <meta property="og:url" content={pageUrl} />
         <meta
           property="og:image"
-          content="https://drpaintinginc.com/assets/images/services-optimized/residental1.webp"
+          content="https://drpaintinginc.com/hs-image.png"
         />
 
         {/* Twitter */}
@@ -83,7 +83,7 @@ export default function HollySpringsHome() {
         />
         <meta
           name="twitter:image"
-          content="https://drpaintinginc.com/assets/images/services-optimized/residental1.webp"
+          content="https://drpaintinginc.com/hs-image.png"
         />
 
         {/* Schema */}
