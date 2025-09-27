@@ -15,7 +15,7 @@ export default function Residential() {
         </title>
         <meta
           name="description"
-          content="Transform your home with expert residential painting services in Raleigh, Cary, Apex & the Triangle area. Interior & exterior painting with care, precision & lasting results."
+          content="Expert residential painting in Raleigh, Cary & Apex. Interior & exterior painting with precision, care, and lasting results. Free quotes!"
         />
         <meta
           name="keywords"

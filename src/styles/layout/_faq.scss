@@ -3,6 +3,7 @@
 .faq-section {
   padding: 4rem 1.5rem;
   background-color: #fffce8;
+
   @media (max-width: rem(430)) {
     margin-top: -100px;
   }
@@ -28,16 +29,36 @@
   .faq-item {
     background: white;
     border-radius: 1rem;
-    padding: 1.5rem;
-    cursor: pointer;
+    padding: 0; // ✅ move padding into button for better click target
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     transition: background-color 0.3s ease;
 
+    &.open {
+      background: #fff9db;
+    }
+
     .faq-question {
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
       font-weight: 700;
       color: #d4a437;
       font-size: 1.1rem;
-      margin-bottom: 0.75rem;
+      padding: 1.5rem; // ✅ makes the button fill the card
+      border-radius: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .arrow {
+        transition: transform 0.3s ease;
+      }
+
+      .arrow.open {
+        transform: rotate(180deg);
+      }
     }
 
     .faq-answer {
@@ -46,15 +67,13 @@
       line-height: 1.5;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      padding: 0 1.5rem;
     }
 
-    &.open {
-      background: #fff9db;
-
-      .faq-answer {
-        max-height: 500px;
-      }
+    &.open .faq-answer {
+      max-height: 500px;
+      padding: 0.75rem 1.5rem 1.5rem;
     }
   }
 }

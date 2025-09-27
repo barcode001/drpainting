@@ -16,6 +16,10 @@ import Commercial from "./pages/Commercial";
 import CabinetRefinishing from "./pages/CabinetRefinishing";
 import PowerWashing from "./pages/PowerWashing";
 import HollySpringsHome from "./pages/HollySpringsHome";
+import ResidentialHollySprings from "./pages/ResidentialHollySprings";
+import CommercialHollySprings from "./pages/CommercialHollySprings";
+import CabinetRefinishingHollySprings from "./pages/CabinetRefinishingHollySprings";
+import PowerWashingHollySprings from "./pages/PowerWashingHollySprings";
 
 function App() {
   return (
@@ -34,9 +38,9 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/:location/about" element={<About />} />
             <Route path="/thank-you" element={<ThankYou />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/:location/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/services/residential" element={<Residential />} />
             <Route path="/services/commercial" element={<Commercial />} />
@@ -45,10 +49,28 @@ function App() {
               element={<CabinetRefinishing />}
             />
             <Route path="/services/power-washing" element={<PowerWashing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
             <Route
               path="/holly-springs-painting-company"
               element={<HollySpringsHome />}
+            />
+            <Route
+              path="/holly-springs/residential-painting"
+              element={<ResidentialHollySprings />}
+            />
+            <Route
+              path="/holly-springs/commercial-painting"
+              element={<CommercialHollySprings />}
+            />
+            <Route
+              path="/holly-springs/cabinet-refinishing"
+              element={<CabinetRefinishingHollySprings />}
+            />
+            <Route
+              path="/holly-springs/power-washing"
+              element={<PowerWashingHollySprings />}
             />
           </Routes>
         </main>

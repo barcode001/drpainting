@@ -4,13 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      D&R Painting Inc. | Residential & Commercial Painting in Raleigh-Durham
-    </title>
-    <meta
-      name="description"
-      content="Family-owned painting company serving Raleigh, Cary, Apex & more. Interior, exterior, cabinet refinishing & pressure washing. Get a free quote today."
-    />
+    <!-- ✅ Title/Meta handled by React Helmet -->
+    <!-- ✅ Keep preload & performance optimizations -->
 
     <!-- Preload hero image -->
     <link
@@ -45,7 +40,7 @@
       <link rel="stylesheet" href="/assets/index-D63hBaca.css" />
     </noscript>
 
-    <!-- Favicon setup -->
+    <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,7 +48,7 @@
     <meta name="apple-mobile-web-app-title" content="D&R" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-QHXCF4PWD1"
@@ -64,34 +59,12 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-QHXCF4PWD1");
     </script>
   </head>
 
   <body>
     <div id="root"></div>
-
     <script type="module" src="/src/main.jsx"></script>
-
-    <!-- Structured Data for Local SEO -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "PaintingService",
-        "name": "D&R Painting Inc.",
-        "url": "https://drpaintinginc.com",
-        "telephone": "(919) 518-7957",
-        "areaServed": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Raleigh",
-            "addressRegion": "NC",
-            "addressCountry": "US"
-          }
-        }
-      }
-    </script>
   </body>
 </html>
