@@ -47,6 +47,40 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Location: Holly Springs -->
+  <url>
+    <loc>https://drpaintinginc.com/holly-springs-painting-company</loc>
+    <lastmod>2025-09-25T08:41:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Holly Springs Services -->
+  <url>
+    <loc>https://drpaintinginc.com/holly-springs/residential-painting</loc>
+    <lastmod>2025-09-25T08:41:41+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://drpaintinginc.com/holly-springs/commercial-painting</loc>
+    <lastmod>2025-09-25T08:41:41+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://drpaintinginc.com/holly-springs/cabinet-refinishing</loc>
+    <lastmod>2025-09-25T08:41:41+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://drpaintinginc.com/holly-springs/power-washing</loc>
+    <lastmod>2025-09-25T08:41:41+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Projects -->
   <url>
     <loc>https://drpaintinginc.com/projects</loc>
@@ -62,7 +96,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-
 
 </urlset>
