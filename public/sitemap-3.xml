@@ -20,6 +20,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://drpaintinginc.com/holly-springs/about</loc>
+    <lastmod>2025-09-25T08:41:41+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- Services -->
   <url>
@@ -92,6 +98,13 @@
   <!-- Contact -->
   <url>
     <loc>https://drpaintinginc.com/contact</loc>
+    <lastmod>2025-09-25T08:41:41+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+    <url>
+    <loc>https://drpaintinginc.com/holly-springs/contact</loc>
     <lastmod>2025-09-25T08:41:41+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
