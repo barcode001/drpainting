@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <>
       <Helmet>
-        <title>Our Work | D&R Painting Inc.</title>
+        <title>Our Painting Work Across the Triangle | D&R Painting Inc.</title>
         <meta
           name="description"
           content="View past residential and commercial painting projects completed by D&R Painting Inc. across Raleigh-Durham and the Triangle area."
