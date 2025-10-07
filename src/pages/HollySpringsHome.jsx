@@ -55,6 +55,12 @@ export default function HollySpringsHome() {
         />
         <link rel="canonical" href={pageUrl} />
 
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/images/holly-springs/holly-springs/holly-springs-city.webp"
+        />
+
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta
