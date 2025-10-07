@@ -67,6 +67,13 @@ export default function HollySpringsHome() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/images/holly-springs/holly-springs-city-900.webp"
+          fetchpriority="high"
+        />
+
         {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
