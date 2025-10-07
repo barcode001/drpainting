@@ -70,12 +70,12 @@ export default function HollySpringsHome() {
         <link
           rel="preload"
           as="image"
-          href="/assets/images/holly-springs/holly-springs-city-1200.webp"
+          href="/holly-springs-city-1200.webp"
           fetchpriority="high"
           imagesrcset="
-    /assets/images/holly-springs/holly-springs-city-600.webp 600w,
-    /assets/images/holly-springs/holly-springs-city-900.webp 900w,
-    /assets/images/holly-springs/holly-springs-city-1200.webp 1200w"
+          /holly-springs-city-600.webp 600w,
+          /holly-springs-city-900.webp 900w,
+          /holly-springs-city-1200.webp 1200w"
           imagesizes="(max-width: 768px) 100vw, 1200px"
         />
         {/* ✅ Open Graph */}
