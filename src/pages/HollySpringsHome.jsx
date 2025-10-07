@@ -70,15 +70,14 @@ export default function HollySpringsHome() {
         <link
           rel="preload"
           as="image"
-          href="https://drpaintinginc.com/assets/holly-springs-city-1200.webp"
+          href="/assets/images/holly-springs/holly-springs-city-1200.webp"
           fetchpriority="high"
           imagesrcset="
-          https://drpaintinginc.com/assets/holly-springs-city-600.webp 600w,
-          https://drpaintinginc.com/assets/holly-springs-city-900.webp 900w,
-          https://drpaintinginc.com/assets/holly-springs-city-1200.webp 1200w"
+    /assets/images/holly-springs/holly-springs-city-600.webp 600w,
+    /assets/images/holly-springs/holly-springs-city-900.webp 900w,
+    /assets/images/holly-springs/holly-springs-city-1200.webp 1200w"
           imagesizes="(max-width: 768px) 100vw, 1200px"
         />
-
         {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
