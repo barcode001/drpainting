@@ -1,20 +1,22 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import HollySpringsHero from "./HollySpringsHero";
 import ServicesSection from "../components/ServicesSection";
 import WhyChooseUs from "./WhyChooseUs";
-import TestimonialsSwiper from "./TestimonialsSwiper";
-import FeaturedProjects from "./FeaturedProjects";
-import FAQ from "./FAQ";
-import ServiceAreas from "../pages/ServiceAreas";
 import clientInfo from "../config/clientInfo";
+
+// ✅ Lazy-load heavy, below-the-fold sections
+const TestimonialsSwiper = lazy(() => import("./TestimonialsSwiper"));
+const FeaturedProjects = lazy(() => import("./FeaturedProjects"));
+const FAQ = lazy(() => import("./FAQ"));
+const ServiceAreas = lazy(() => import("../pages/ServiceAreas"));
 
 export default function HollySpringsHome() {
   const pageUrl = "https://drpaintinginc.com/holly-springs-painting-company";
 
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "HousePainter",
     name: `${clientInfo.businessName} - Holly Springs`,
     image:
       "https://drpaintinginc.com/assets/images/logo/drpaintinginc-logo.webp",
@@ -32,11 +34,13 @@ export default function HollySpringsHome() {
       "@type": "Place",
       name: "Holly Springs NC and surrounding areas",
     },
+    description:
+      "Professional house painters in Holly Springs, NC — offering interior & exterior painting, cabinet refinishing, and pressure washing.",
     sameAs: [
       clientInfo.social.facebook,
       clientInfo.social.instagram,
       clientInfo.social.tiktok,
-    ].filter(Boolean), // removes empty links like TikTok
+    ].filter(Boolean),
   };
 
   return (
@@ -53,15 +57,10 @@ export default function HollySpringsHome() {
           name="keywords"
           content="Holly Springs painters, house painting Holly Springs, commercial painting Holly Springs NC, cabinet refinishing Holly Springs, power washing Holly Springs"
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
 
-        <link
-          rel="preload"
-          as="image"
-          href="/assets/images/holly-springs/holly-springs/holly-springs-city.webp"
-        />
-
-        {/* Open Graph */}
+        {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -77,7 +76,7 @@ export default function HollySpringsHome() {
           content="https://drpaintinginc.com/hs-image.png"
         />
 
-        {/* Twitter */}
+        {/* ✅ Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -92,17 +91,32 @@ export default function HollySpringsHome() {
           content="https://drpaintinginc.com/hs-image.png"
         />
 
-        {/* Schema */}
+        {/* ✅ Structured Data */}
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
 
+      {/* ✅ Above-the-fold content */}
       <HollySpringsHero />
+
       <ServicesSection locationKey="hollySprings" />
       <WhyChooseUs locationName="Holly Springs" />
-      <TestimonialsSwiper />
-      <FeaturedProjects />
-      <FAQ locationKey="hollySprings" />
-      <ServiceAreas />
+
+      {/* ✅ Below-the-fold sections lazy-loaded for speed */}
+      <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
+        <TestimonialsSwiper />
+      </Suspense>
+
+      <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
+        <FeaturedProjects />
+      </Suspense>
+
+      <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
+        <FAQ locationKey="hollySprings" />
+      </Suspense>
+
+      <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
+        <ServiceAreas />
+      </Suspense>
     </div>
   );
 }
