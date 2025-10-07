@@ -59,6 +59,13 @@ export default function HollySpringsHome() {
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
+        {/* ✅ Add these right here */}
+        <link rel="preconnect" href="https://drpaintinginc.com" crossorigin />
+        <link rel="dns-prefetch" href="https://drpaintinginc.com" />
+
+        {/* ✅ Optional: preconnect to Google Fonts only if you're using them */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
         {/* ✅ Open Graph */}
         <meta property="og:type" content="website" />
