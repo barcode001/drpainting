@@ -103,11 +103,11 @@ export default function HollySpringsHome() {
 
       {/* ✅ Below-the-fold sections lazy-loaded for speed */}
       <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
-        <TestimonialsSwiper />
+        <TestimonialsSwiper loading="lazy" />
       </Suspense>
 
       <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
-        <FeaturedProjects />
+        <FeaturedProjects loading="lazy" />
       </Suspense>
 
       <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
