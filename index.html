@@ -44,6 +44,7 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Google Analytics -->
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-QHXCF4PWD1"
@@ -53,8 +54,16 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", "G-QHXCF4PWD1");
+
+      // Delay GA setup slightly to prevent main-thread blocking
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          gtag("js", new Date());
+          gtag("config", "G-QHXCF4PWD1", { send_page_view: false });
+          // Manually trigger page_view after hydration
+          gtag("event", "page_view");
+        }, 200);
+      });
     </script>
   </head>
 
