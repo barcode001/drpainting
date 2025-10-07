@@ -1,7 +1,7 @@
 // src/config/servicesData.js
-import residentialImg from "../assets/images/services-optimized/residential-holly-springs.webp";
-import commercialImg from "../assets/images/services-optimized/comercial-holly-springs.webp";
-import cabinetsImg from "../assets/images/services-optimized/cabinet-holly-springs.webp";
+import residentialImg from "../assets/images/services-optimized/residential-holly-springs-2.webp";
+import commercialImg from "../assets/images/services-optimized/comercial-holly-springs-2.webp";
+import cabinetsImg from "../assets/images/services-optimized/cabinet-holly-springs-2.webp";
 import powerWashingImg from "../assets/images/services-optimized/power-washing-holly-springs-2-2.webp"; 
 // ⚠️ replace with correct power washing image later
 
