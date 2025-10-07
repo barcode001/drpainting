@@ -5,6 +5,7 @@ import { sendEmail } from "../utils/sendEmail";
 import clientInfo from "../config/clientInfo";
 import ServiceAreas from "./ServiceAreas";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useLocation } from "react-router-dom";
 
 function Contact() {
   const recaptchaRef = useRef(null);
@@ -15,7 +16,8 @@ function Contact() {
   const [error, setError] = useState(null);
   const [formLoadTime] = useState(Date.now());
 
-  const pageUrl = "https://drpaintinginc.com/contact";
+  const location = useLocation();
+  const pageUrl = `https://drpaintinginc.com${location.pathname}`;
 
   const schemaData = {
     "@context": "https://schema.org",

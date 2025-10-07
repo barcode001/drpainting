@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 import clientInfo from "../config/clientInfo";
 import useRevealOnScroll from "../components/useRevealOnScroll";
 import ServiceAreas from "./ServiceAreas";
+import { useLocation } from "react-router-dom";
 // import aboutImage from "../assets/images/services/residental.jpeg";
 
 export default function About() {
+  const location = useLocation();
+  const canonicalUrl = `https://drpaintinginc.com${location.pathname}`;
+
   useRevealOnScroll();
 
   const schemaData = {
@@ -41,13 +45,13 @@ export default function About() {
         </title>
         <meta
           name="description"
-          content="Get to know Dulce & Ricardo, owners of D&R Painting Inc. — a family-owned painting company serving Raleigh, Cary, Apex, and the entire Triangle area with expert residential and commercial painting since 2005."
+          content="Meet Dulce & Ricardo, owners of D&R Painting Inc.—a family-run painting company serving Raleigh, Cary & Apex with trusted residential and commercial work."
         />
         <meta
           name="keywords"
           content="About D&R Painting, Raleigh painters, Cary painting company, Apex NC painters, Triangle area painting, family-owned painters, Dulce and Ricardo"
         />
-        <link rel="canonical" href="https://drpaintinginc.com/about" />
+        <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
