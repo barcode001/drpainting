@@ -70,7 +70,7 @@ export default function HollySpringsHome() {
         <link
           rel="preload"
           as="image"
-          href="/assets/images/holly-springs/holly-springs-city-900.webp"
+          href="/assets/images/holly-springs/holly-springs-city-600.webp"
           fetchpriority="high"
         />
 
