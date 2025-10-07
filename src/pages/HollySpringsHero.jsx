@@ -35,7 +35,11 @@
 // }
 import React from "react";
 import clientInfo from "../config/clientInfo";
-import hollySpringsHero from "../assets/images/holly-springs/holly-springs/holly-springs-city.webp";
+
+// ✅ Import all sizes so Vite processes them
+import hero600 from "../assets/images/holly-springs-city-600.webp";
+import hero900 from "../assets/images/holly-springs-city-900.webp";
+import hero1200 from "../assets/images/holly-springs-city-1200.webp";
 
 export default function HollySpringsHero() {
   const rawPhone = clientInfo?.contact?.phone || "";
@@ -45,7 +49,9 @@ export default function HollySpringsHero() {
     <section className="hero hero--holly-springs">
       <div className="hero__image-wrapper">
         <img
-          src={hollySpringsHero}
+          src={hero1200}
+          srcSet={`${hero600} 600w, ${hero900} 900w, ${hero1200} 1200w`}
+          sizes="(max-width: 768px) 100vw, 1200px"
           alt="Downtown Holly Springs, NC — D&R Painting Inc."
           width="1200"
           height="800"
