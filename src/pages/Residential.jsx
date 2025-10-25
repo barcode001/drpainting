@@ -1,105 +1,3 @@
-// import React from "react";
-// import residentialImage from "../assets/images/services-optimized/kitchen1.webp";
-// import { Link } from "react-router-dom";
-// import { Helmet } from "react-helmet-async";
-// import useRevealOnScroll from "../components/useRevealOnScroll";
-// import ServiceAreas from "./ServiceAreas";
-
-// export default function Residential() {
-//   useRevealOnScroll();
-//   return (
-//     <>
-//       <Helmet>
-//         <title>
-//           Residential Painting in Raleigh-Durham | D&R Painting Inc.
-//         </title>
-//         <meta
-//           name="description"
-//           content="Expert residential painting in Raleigh, Cary & Apex. Interior & exterior painting with precision, care, and lasting results. Free quotes!"
-//         />
-//         <meta
-//           name="keywords"
-//           content="residential painting Raleigh, house painters Cary, interior painting Triangle, exterior home painting NC, painting company Raleigh"
-//         />
-//         <link
-//           rel="canonical"
-//           href="https://drpaintinginc.com/services/residential"
-//         />
-
-//         {/* Open Graph */}
-//         <meta property="og:type" content="website" />
-//         <meta
-//           property="og:title"
-//           content="Residential Painting Raleigh, Cary & Apex | D&R Painting Inc."
-//         />
-//         <meta
-//           property="og:description"
-//           content="Interior & exterior residential painting services across Raleigh, Cary & Apex. Family-owned since 2005. Free quotes available."
-//         />
-//         <meta
-//           property="og:url"
-//           content="https://drpaintinginc.com/services/residential"
-//         />
-//         <meta
-//           property="og:image"
-//           content="https://drpaintinginc.com/og-image.jpg"
-//         />
-
-//         {/* Twitter */}
-//         <meta name="twitter:card" content="summary_large_image" />
-//         <meta
-//           name="twitter:title"
-//           content="Residential Painting Raleigh, Cary & Apex | D&R Painting Inc."
-//         />
-//         <meta
-//           name="twitter:description"
-//           content="Expert residential house painting in Raleigh, Cary & Apex. Interior, exterior & cabinet refinishing with care and precision."
-//         />
-//         <meta
-//           name="twitter:image"
-//           content="https://drpaintinginc.com/og-image.jpg"
-//         />
-//       </Helmet>
-//       <section className="service-detail">
-//         <div className="container">
-//           <div className="text-section ">
-//             <h1 className="reveal">Residential Painting</h1>
-//             <p className="reveal">
-//               Transform your home with professional painting services tailored
-//               to your vision. At D&R Painting Inc., we treat every house like
-//               our own — focusing on clean lines, smooth finishes, and
-//               long-lasting results.
-//             </p>
-//             <div className="image-section reveal">
-//               <img
-//                 src={residentialImage}
-//                 alt="Residential Painting"
-//                 width="100%"
-//                 height="auto"
-//               />
-//             </div>
-//             <p className="reveal">
-//               Whether you need a fresh coat inside your living room or a
-//               complete exterior makeover, we work with you to select the right
-//               colors and products for your space. We protect your furniture,
-//               keep your space tidy, and always clean up after ourselves.
-//             </p>
-//             <p className="reveal">
-//               Our team brings years of experience and a commitment to detail
-//               that sets us apart. You'll not only love how your home looks —
-//               you'll love the experience of getting there.
-//             </p>
-//             <Link to="/contact" className="hero-button primary">
-//               Get a Free Quote
-//             </Link>
-//           </div>
-//         </div>
-//       </section>
-//       <ServiceAreas />
-//     </>
-//   );
-// }
-
 import React, { useState } from "react";
 import residentialImage from "../assets/images/services-optimized/kitchen1.webp";
 import { Link } from "react-router-dom";
@@ -127,7 +25,7 @@ export default function Residential() {
           goals in detail. You’ll receive a clear, written estimate that
           outlines all preparation, labor, and materials. We believe
           transparency builds trust, so there are never hidden fees or surprises
-          — just honest communication from start to finish.
+          just honest communication from start to finish.
         </>
       ),
     },
@@ -138,9 +36,9 @@ export default function Residential() {
           The cost of a painting project depends on your home’s size, condition,
           and the products you choose. We always provide detailed, written
           estimates before work begins so you know exactly what’s included. Our
-          team can also suggest cost-saving options, such as repainting only
+          team can also suggest cost saving options, such as repainting only
           high-traffic areas or focusing on the most weathered exterior sides.
-          Whether it’s a small refresh or a full-home repaint, you’ll get expert
+          Whether it’s a small refresh or a full home repaint, you’ll get expert
           guidance on the best value for your investment.
         </>
       ),
@@ -152,11 +50,11 @@ export default function Residential() {
           In North Carolina, the best time to paint exteriors is typically
           spring or fall, when temperatures are mild and humidity levels are
           stable. Those seasons allow paint to dry evenly and bond properly to
-          the surface. For interiors, painting can be done year-round —
-          especially since we use low-odor, fast-drying paints that minimize
-          disruption to your daily routine. No matter the season, our
-          residential painters monitor weather and moisture levels to make sure
-          every job is done right.
+          the surface. For interiors, painting can be done year round especially
+          since we use low odor, fast drying paints that minimize disruption to
+          your daily routine. No matter the season, our residential painters
+          monitor weather and moisture levels to make sure every job is done
+          right.
         </>
       ),
     },
@@ -169,8 +67,8 @@ export default function Residential() {
           care and sealing off work areas to reduce dust or fumes. We
           communicate daily about our schedule so you always know when and where
           we’ll be working. Many of our clients tell us they’re surprised by how
-          seamless and respectful the process feels — we treat your home as if
-          it were our own.
+          seamless and respectful the process feels we treat your home as if it
+          were our own.
         </>
       ),
     },
@@ -191,10 +89,10 @@ export default function Residential() {
       question: "Are you insured and licensed?",
       answer: (
         <>
-          Yes — D&amp;R Painting Inc. is fully licensed and insured in the state
+          Yes, D&amp;R Painting Inc. is fully licensed and insured in the state
           of North Carolina. We maintain general liability insurance and
           workers’ compensation coverage to protect both our customers and our
-          team. We’re also EPA Lead-Safe Certified for homes built before 1978,
+          team. We’re also EPA Lead Safe Certified for homes built before 1978,
           ensuring that every project meets strict safety and environmental
           standards. Hiring a licensed, insured contractor means your investment
           and property are protected at every step.
@@ -205,7 +103,7 @@ export default function Residential() {
       question: "Do you work with HOA color restrictions?",
       answer: (
         <>
-          Yes. We regularly handle painting projects for neighborhoods and
+          Yes, We regularly handle painting projects for neighborhoods and
           communities with HOA color guidelines throughout Raleigh, Cary, Apex,
           and Holly Springs. Our team can assist you in reviewing approved color
           palettes, preparing documentation for HOA approval, and matching
@@ -219,12 +117,12 @@ export default function Residential() {
       question: "Do you offer color consultation?",
       answer: (
         <>
-          Definitely. Choosing the right paint color can be overwhelming, so we
+          Definitely, Choosing the right paint color can be overwhelming, so we
           offer personalized color consultations to help you find shades that
           fit your home’s lighting, style, and architecture. Our painters can
           apply sample swatches, discuss how tones will appear in natural and
-          interior light, and recommend durable, fade-resistant finishes from
-          trusted brands like Sherwin-Williams and Benjamin Moore. We’ll help
+          interior light, and recommend durable, fade resistant finishes from
+          trusted brands like Sherwin Williams and Benjamin Moore. We’ll help
           you feel confident that the colors you choose will look amazing for
           years to come.
         </>
@@ -398,7 +296,7 @@ export default function Residential() {
                 Raleigh-Durham area
               </strong>
               , including Cary, Apex, and Holly Springs. For nearly two decades,
-              homeowners have trusted our family-owned company for honest work,
+              homeowners have trusted our family owned company for honest work,
               beautiful finishes, and lasting results.
             </p>
 
@@ -413,7 +311,7 @@ export default function Residential() {
 
             <h2 className="reveal">A Home You’ll Love Coming Back To</h2>
             <p className="reveal">
-              Painting your home isn’t just about color — it’s about creating an
+              Painting your home isn’t just about color it’s about creating an
               environment that feels inviting, calm, and timeless. Our
               professional painters take the time to understand your vision,
               recommend color palettes, and ensure every detail meets your
@@ -429,7 +327,7 @@ export default function Residential() {
               ensure every residential painting project meets the highest safety
               and quality standards. Our team carries general liability and
               workers’ compensation coverage, and we’re certified in EPA
-              <strong> Lead-Safe Renovation (RRP)</strong> for older homes.
+              <strong> Lead Safe Renovation (RRP)</strong> for older homes.
               You’ll always know your property is protected by professionals who
               take compliance seriously.
             </p>
@@ -439,22 +337,22 @@ export default function Residential() {
               Benefits of Professional Residential Painting
             </h2>
             <p className="reveal">
-              A professional paint job does more than improve appearance — it
-              adds value, comfort, and protection to your property. Proper
-              surface preparation and high-quality coatings seal and protect
-              walls from moisture, mildew, and wear. New paint can brighten dark
-              rooms, modernize dated colors, and even make spaces feel larger.
+              A professional paint job does more than improve appearance it adds
+              value, comfort, and protection to your property. Proper surface
+              preparation and high quality coatings seal and protect walls from
+              moisture, mildew, and wear. New paint can brighten dark rooms,
+              modernize dated colors, and even make spaces feel larger.
             </p>
             <ul className="reveal">
               <li>Boosts curb appeal and overall home value</li>
               <li>Protects surfaces from weather, sunlight, and humidity</li>
               <li>Improves indoor air quality with low-VOC paints</li>
-              <li>Reduces long-term maintenance and repair costs</li>
+              <li>Reduces long term maintenance and repair costs</li>
               <li>Refreshes your home’s atmosphere and mood</li>
             </ul>
 
             {/* ✅ NEW: Painting Process Section */}
-            <h2 className="reveal">Our Step-by-Step Painting Process</h2>
+            <h2 className="reveal">Our Step by Step Painting Process</h2>
             <p className="reveal">
               Our painters follow a consistent, proven process to ensure every
               project runs smoothly from start to finish:
@@ -470,12 +368,11 @@ export default function Residential() {
               </li>
               <li>
                 <strong>Priming:</strong> We apply primer where needed to ensure
-                even color and long-lasting adhesion.
+                even color and long lasting adhesion.
               </li>
               <li>
-                <strong>Painting:</strong> Using top-quality paints from
-                Sherwin-Williams or Benjamin Moore, applied with precision and
-                care.
+                <strong>Painting:</strong> Using top-quality paints from Sherwin
+                Williams or Benjamin Moore, applied with precision and care.
               </li>
               <li>
                 <strong>Final Walkthrough:</strong> We inspect the work with you
@@ -487,9 +384,9 @@ export default function Residential() {
             <h2 className="reveal">Our Satisfaction Guarantee</h2>
             <p className="reveal">
               Every project we complete is backed by our satisfaction guarantee.
-              If you’re not fully happy with the results, we’ll make it right —
-              no questions asked. Our goal is to provide a painting experience
-              that’s stress-free, professional, and exceeds expectations. With
+              If you’re not fully happy with the results, we’ll make it right no
+              questions asked. Our goal is to provide a painting experience
+              that’s stress free, professional, and exceeds expectations. With
               our reputation built on referrals and repeat customers, your trust
               means everything to us.
             </p>
@@ -499,16 +396,16 @@ export default function Residential() {
               Hiring professional painters makes all the difference. Proper
               surface prep, durable products, and skilled application ensure
               your paint lasts for years. We prevent common DIY issues like
-              uneven finishes, peeling, or visible brush marks — saving you time
+              uneven finishes, peeling, or visible brush marks saving you time
               and money in the long run.
             </p>
 
             <h2 className="reveal">Locally Owned. Family Operated.</h2>
             <p className="reveal">
-              As a family-owned business based in the Raleigh-Durham area, we
-              believe in building long-term relationships through trust,
+              As a family owned business based in the Raleigh-Durham area, we
+              believe in building long term relationships through trust,
               integrity, and hard work. Many of our clients come from referrals
-              or repeat business — a testament to the care we put into every
+              or repeat business a testament to the care we put into every
               project. We’re proud to serve our local communities and treat
               every home like family.
             </p>
