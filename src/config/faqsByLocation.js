@@ -1,17 +1,37 @@
 export const faqsByLocation = {
   default: [
-    {
-      question: "Do you offer free estimates?",
-      answer: "Yes, we provide free, no-obligation estimates for all painting projects.",
-    },
-    {
-      question: "Are you insured?",
-      answer: "Yes, D&R Painting Inc. is fully licensed and insured for residential and commercial work.",
-    },
-    {
-      question: "What types of projects do you handle?",
-      answer: "We specialize in interior painting, exterior painting, cabinet refinishing, and power washing.",
-    },
+ {
+  question: "What brands of paint do you use?",
+  answer: "We primarily use premium brands like Sherwin-Williams and Benjamin Moore for lasting quality and color accuracy."
+},
+{
+  question: "Do you offer color consultations?",
+  answer: "Yes, we can help you choose the perfect color palette to match your style and lighting conditions."
+},
+{
+  question: "How do you prepare surfaces before painting?",
+  answer: "We clean, sand, patch, and prime all surfaces to ensure a smooth and durable finish."
+},
+{
+  question: "Do you move furniture before painting?",
+  answer: "Yes, our team carefully moves and covers furniture and flooring to protect your home throughout the project."
+},
+{
+  question: "What payment methods do you accept?",
+  answer: "We accept cash, checks, and major credit cards. Payment is only due once the job is completed to your satisfaction."
+},
+{
+  question: "Do you offer any warranties on your work?",
+  answer: "Yes, we stand by our craftsmanship with a satisfaction guarantee and warranty against peeling or chipping within the first year."
+},
+{
+  question: "Can you repair drywall or wood trim before painting?",
+  answer: "Absolutely. We can handle drywall patching, minor repairs, and trim touch-ups as part of the preparation process."
+},
+{
+  question: "Do you paint commercial properties too?",
+  answer: "Yes, we handle both residential and commercial projects, from office spaces to storefronts and apartment complexes."
+}
   ],
 
   hollySprings: [
