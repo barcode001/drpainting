@@ -100,6 +100,79 @@ export default function HollySpringsHome() {
 
         {/* ✅ Structured Data */}
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Do you offer free estimates?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide free, no-obligation estimates for all painting services in Holly Springs. Our team visits your property, discusses your goals, and provides a detailed written quote.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are you licensed and insured in North Carolina?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, D&R Painting Inc. is fully licensed and insured in NC, serving Holly Springs and surrounding communities. We also carry workers’ comp and general liability coverage.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What painting services do you offer in Holly Springs?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We provide interior and exterior painting, commercial painting, cabinet refinishing, and pressure washing services to homeowners and businesses in Holly Springs, NC.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does a typical painting project take?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most projects are completed within 2 to 5 days depending on size and weather. We'll give you a clear timeline during your quote and keep you updated every step of the way.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you work with HOA guidelines in Holly Springs?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we regularly help homeowners in Holly Springs neighborhoods follow HOA color and documentation requirements. We can help with approvals and matching colors.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide color consultations?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes! We can help you choose the perfect colors based on your home’s style and lighting. Our team provides swatches, expert advice, and uses trusted paint brands like Sherwin-Williams.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I stay home while you're painting?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Absolutely. Many of our Holly Springs clients stay home during interior painting. We work cleanly and respectfully — keeping disruption to a minimum.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer cabinet refinishing in Holly Springs?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. We specialize in professional cabinet painting and refinishing for kitchens and bathrooms in Holly Springs. It’s a cost-effective way to transform your space.",
+                },
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       {/* ✅ Above-the-fold content */}

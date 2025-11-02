@@ -360,3 +360,25 @@
   position: relative;
   overflow: hidden;
 }
+
+.faq-section {
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  .faq-item {
+    margin-bottom: 2rem;
+    h3 {
+      font-size: 1.25rem;
+      color: #d4a31c;
+    }
+    p {
+      font-size: 1rem;
+      color: #444;
+    }
+  }
+}
+
+.faq-title {
+  display: grid;
+  place-items: center;
+}

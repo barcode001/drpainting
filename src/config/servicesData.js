@@ -136,7 +136,7 @@ export const servicesByLocation = {
       ...baseServices.cabinets,
       description:
         "Update your kitchen or bathroom cabinets in Holly Springs with smooth, durable finishes that look brand new.",
-      backText: `Our Holly Springs cabinet refinishing service transforms kitchens and bathrooms with durable, modern finishes. We sand, prime, and apply industrial-grade coatings for a flawless result that lasts. Choose from designer colors and satin finishes to match your style — all while saving money compared to full cabinet replacement.`,
+      backText: `Our Holly Springs cabinet refinishing service transforms kitchens and bathrooms with durable, modern finishes. We sand, prime, and apply industrial-grade coatings for a flawless result that lasts. Choose from designer colors and satin finishes to match your style all while saving money compared to full cabinet replacement.`,
       path: "/holly-springs/cabinet-refinishing",
     },
     {

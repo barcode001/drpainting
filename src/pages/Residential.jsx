@@ -144,6 +144,39 @@ export default function Residential() {
           rel="canonical"
           href="https://drpaintinginc.com/services/residential"
         />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Residential Painting in Raleigh-Durham | D&R Painting Inc."
+        />
+        <meta
+          property="og:description"
+          content="Expert residential painting in Raleigh, Cary & Apex. Interior & exterior painting with precision, care, and lasting results."
+        />
+        <meta
+          property="og:image"
+          content="https://drpaintinginc.com/assets/images/services-optimized/kitchen1.webp"
+        />
+        <meta
+          property="og:url"
+          content="https://drpaintinginc.com/services/residential"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Residential Painting in Raleigh-Durham | D&R Painting Inc."
+        />
+        <meta
+          name="twitter:description"
+          content="Professional exterior and interior house painting across Raleigh, Cary, Apex & Holly Springs. Free quotes available."
+        />
+        <meta
+          name="twitter:image"
+          content="https://drpaintinginc.com/assets/images/services-optimized/kitchen1.webp"
+        />
 
         <script type="application/ld+json">
           {JSON.stringify([

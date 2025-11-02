@@ -23,7 +23,7 @@
   .faq-list {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    // gap: 1.25rem;
   }
 
   .faq-item {
@@ -32,6 +32,8 @@
     padding: 0; // ✅ move padding into button for better click target
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     transition: background-color 0.3s ease;
+
+    margin: 0;
 
     &.open {
       background: #fff9db;
