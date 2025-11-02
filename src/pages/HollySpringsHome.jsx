@@ -120,6 +120,18 @@ export default function HollySpringsHome() {
       <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
         <FAQ locationKey="hollySprings" />
       </Suspense>
+      <section className="hero-intro">
+        <p className="style-text">
+          Founded in 2005, D&R Painting Inc. is a family-owned and operated
+          company proudly serving Holly Springs, NC, and surrounding
+          communities. For nearly two decades, we’ve helped local homeowners and
+          businesses enhance their properties with professional painting
+          services known for quality, reliability, and attention to detail. From
+          interior walls to full exterior projects, our mission remains the same
+          — to deliver lasting beauty and a flawless finish with every
+          brushstroke.
+        </p>
+      </section>
 
       <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
         <ServiceAreas />

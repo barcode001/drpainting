@@ -45,10 +45,11 @@
     background: transparent;
     img {
       width: 100%;
-      height: 60%;
+      height: 68%;
       border-radius: 12px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      object-fit: cover;
     }
 
     &:hover {
@@ -163,7 +164,7 @@
 .service-card {
   perspective: 1000px;
   cursor: pointer;
-  height: 520px;
+  height: 560px;
   transition: transform 0.4s ease;
   border-radius: 12px;
 
@@ -260,7 +261,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 455px;
+
+    height: 496px;
 
     h3 {
       color: #333;
