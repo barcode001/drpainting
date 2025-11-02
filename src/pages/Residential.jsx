@@ -466,7 +466,6 @@ export default function Residential() {
           </div>
         </div>
       </section>
-
       <ServiceAreas />
     </>
   );

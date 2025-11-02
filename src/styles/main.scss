@@ -139,3 +139,14 @@ body {
   opacity: 0.2;
   z-index: -1;
 }
+
+.hero-intro {
+  margin: 0 auto;
+  max-width: 1000px;
+  text-wrap: pretty;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}

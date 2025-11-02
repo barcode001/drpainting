@@ -40,12 +40,12 @@
     background: #fff;
     border-radius: 12px;
     // padding: 2rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.128);
+    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.128);
     transition: transform 0.3s;
-
+    background: transparent;
     img {
       width: 100%;
-      height: auto;
+      height: 60%;
       border-radius: 12px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -91,8 +91,8 @@
     }
 
     &.secondary {
-      background-color: #f1f1f1;
-      color: #333;
+      background-color: #d4a437;
+      color: white;
 
       &:hover {
         background-color: #e1e1e1;
@@ -158,4 +158,203 @@
   font-weight: bold;
   font-size: 1rem;
   flex-shrink: 0;
+}
+
+.service-card {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 520px;
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+  }
+
+  &.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+
+    height: 100%;
+
+    border-radius: 12px;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+
+  .card-front {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 2px 2px rgb(176, 175, 175) !important;
+    background-color: rgb(238, 238, 238);
+
+    h3 {
+      font-size: 1.25rem;
+      // margin: 1rem 0 0.25rem;
+      margin: 0;
+      color: #222;
+    }
+
+    p {
+      color: #666;
+      font-size: 0.95rem;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .tap-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-size: 0.95rem;
+      color: #b38b59;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+      transition: opacity 0.3s ease;
+
+      .tap-icon {
+        font-size: 1.2rem;
+        animation: tapBounce 1.5s ease-in-out infinite;
+      }
+    }
+
+    /* 👇 Gentle bounce animation */
+    @keyframes tapBounce {
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(4px);
+        opacity: 0.75;
+      }
+    }
+
+    /* Optional: dim the hint once card is flipped */
+    .service-card.flipped .tap-hint {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .card-back {
+    background: linear-gradient(145deg, #fff8ef, #f2e4ca);
+    transform: rotateY(180deg);
+    padding: 2rem 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 455px;
+
+    h3 {
+      color: #333;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      // max-height: 180px;
+      // overflow-y: auto;
+      padding-right: 0.25rem;
+
+      /* Subtle gold scrollbar for mobile */
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #b38b59;
+        border-radius: 6px;
+      }
+    }
+
+    .hero-button {
+      background-color: #b38b59;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background-color: #a67a46;
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &.flipped .card-front {
+    transform: rotateY(180deg);
+  }
+
+  /* 👇 Tap icon in corner */
+  .tap-icon-wrapper {
+    position: absolute;
+    bottom: 1rem;
+    right: 0.75rem;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+
+    .tap-icon {
+      font-size: 2rem;
+      color: #b38b59;
+      animation: tapBounce 1.4s ease-in-out infinite;
+    }
+  }
+
+  &.flipped .tap-icon-wrapper {
+    opacity: 0; /* Hide icon when flipped */
+  }
+}
+
+.tap-icon-wrapper {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+
+  .tap-icon {
+    font-size: 1.6rem;
+    color: #b38b59;
+    animation: tapBounce 1.5s ease-in-out infinite;
+  }
+
+  @media (hover: hover) {
+    opacity: 0.6;
+    .tap-icon {
+      animation: none;
+    }
+  }
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
 }

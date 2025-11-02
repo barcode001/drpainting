@@ -28,9 +28,12 @@ export default function FeaturedProjects() {
     <section className="featured-projects">
       <div className="container reveal">
         <h2 className="reveal">Recent Projects</h2>
-        <p className="section-description reveal">
+        <p className="section-description reveal style-text">
           A preview of some of our latest transformations across the Triangle
-          Area.
+          area from full-home exterior repaints to detailed cabinet refinishing
+          and drywall touch-ups. Every project reflects the same care and
+          attention that have made us one of Raleigh’s most trusted painting
+          companies.
         </p>
 
         <Swiper

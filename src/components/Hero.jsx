@@ -44,6 +44,13 @@ export default function Hero() {
             Residential & Commercial Painting <br /> in Raleigh-Durham, NC
           </h1>
           <p className="hero-tagline">Bring Color to Your World</p>
+          <p className="style-text">
+            At D&R Painting Inc., we bring more than 20 years of experience to
+            every brushstroke. From interior and exterior painting to cabinet
+            refinishing and pressure washing, our team delivers craftsmanship
+            homeowners can rely on all backed by honesty, professionalism, and
+            pride in our work.
+          </p>
 
           <div className="buttons">
             <Link
