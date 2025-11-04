@@ -178,7 +178,7 @@
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.8s ease;
+    transition: transform 1.8s ease;
   }
 
   &.flipped .card-inner {
@@ -330,7 +330,7 @@
     .tap-icon {
       font-size: 2rem;
       color: #b38b59;
-      animation: tapBounce 1.4s ease-in-out infinite;
+      animation: tapBounce 1s ease-in-out infinite;
     }
   }
 
