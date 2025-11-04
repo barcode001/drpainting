@@ -40,10 +40,11 @@
     background: #fff;
     border-radius: 12px;
     // padding: 2rem 0rem 2rem 0rem;
-    padding: 2.1rem 0.5rem 2.1rem 0.5rem;
+    padding: 3.2rem 0.5rem 3.2rem 0.5rem;
     // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.128);
     transition: transform 0.3s;
     background: transparent;
+
     @media (max-width: 600px) {
       padding: 1.1rem 0.5rem 1.1rem 0.5rem;
     }
@@ -172,6 +173,8 @@
   height: 560px;
   transition: transform 0.4s ease;
   border-radius: 12px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 
   .card-inner {
     position: relative;
@@ -179,6 +182,12 @@
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 1.8s ease;
+    will-change: transform;
+    -webkit-transform-style: preserve-3d;
+    transform: perspective(50cm);
+    @media (max-width: rem(430)) {
+      transform: perspective(45cm);
+    }
   }
 
   &.flipped .card-inner {
