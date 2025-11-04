@@ -314,9 +314,9 @@
     transform: translateY(-4px);
   }
 
-  &.flipped .card-front {
-    transform: rotateY(180deg);
-  }
+  // &.flipped .card-front {
+  //   transform: rotateY(180deg);
+  // }
 
   /* 👇 Tap icon in corner */
   .tap-icon-wrapper {
