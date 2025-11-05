@@ -43,14 +43,18 @@ import { PiHandTapLight } from "react-icons/pi";
 
 export default function ServicesSection({ locationKey }) {
   useRevealOnScroll();
-  const [flippedIndex, setFlippedIndex] = useState(null);
+  // const [flippedIndex, setFlippedIndex] = useState(null);
 
   const services = servicesByLocation[locationKey] || [];
+  // ✅ Track multiple flipped cards using object
+  const [flippedStates, setFlippedStates] = useState({});
 
   const handleFlip = (index) => {
-    setFlippedIndex(flippedIndex === index ? null : index);
+    setFlippedStates((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
   };
-
   return (
     <section className="services" id="services">
       <div className="container">
@@ -67,7 +71,7 @@ export default function ServicesSection({ locationKey }) {
             <div
               key={index}
               className={`service-card ${
-                flippedIndex === index ? "flipped" : ""
+                flippedStates[index] ? "flipped" : ""
               }`}
               onClick={() => handleFlip(index)}
             >
