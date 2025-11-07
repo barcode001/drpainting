@@ -1,149 +1,426 @@
-@use "../abstracts/functions" as *;
+// @use "../abstracts/functions" as *;
 
-.hero-card {
-  display: flex;
-  justify-content: center;
-  padding: 1.1rem;
+// .hero-card {
+//   display: flex;
+//   justify-content: center;
+//   padding: 1.1rem;
 
-  p {
-    text-wrap: pretty;
-  }
-  .card {
-    background: white;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.129);
-    max-width: 1100px;
+//   p {
+//     text-wrap: pretty;
+//   }
+//   .card {
+//     background: white;
+//     border-radius: 1rem;
+//     overflow: hidden;
+//     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.129);
+//     max-width: 1100px;
 
-    text-align: center;
+//     text-align: center;
+//     position: relative;
+
+//     .card-image {
+//       background-color: var(--bg-color, #b8922b); // default color
+//       transition: background-color 1.2s ease;
+//       display: flex;
+//       justify-content: center;
+//       position: relative; // Important for layering
+
+//       img {
+//         width: 100%;
+//         height: auto;
+//         object-fit: cover;
+//         box-sizing: border-box;
+//       }
+
+//       .painter {
+//         position: absolute;
+//         top: 0;
+//         left: -25%;
+//         z-index: 2; // Make sure this is above .hero-bg-image
+//         width: 100%;
+//         height: 100%;
+//         object-fit: contain;
+//         pointer-events: none; // optional, makes sure it doesn’t block clicks
+//         box-sizing: border-box;
+//         @media (max-width: 430px) {
+//           object-fit: cover;
+//         }
+//       }
+
+//       .hero-bg-image {
+//         // position: absolute;
+//         top: 0;
+//         left: 0;
+//         z-index: 1;
+//         width: 100%;
+//         min-height: 350px;
+//         object-fit: cover;
+//         box-sizing: border-box;
+//       }
+//       h1 {
+//         top: 5%;
+//         right: 10%;
+//         font-weight: 700;
+//         position: absolute;
+//         color: white;
+//         font-size: clamp(rem(21), 4vw, rem(65));
+//       }
+//     }
+
+//     .card-content {
+//       padding-top: rem(16);
+//       padding-bottom: rem(20);
+//       padding-left: rem(5);
+//       padding-right: rem(5);
+
+//       h1 {
+//         font-size: clamp(rem(8), 5vw, rem(32));
+
+//         margin-bottom: 0.5rem;
+//         font-weight: 700;
+//         color: #222;
+//         text-wrap: nowrap;
+//       }
+
+//       .hero-tagline {
+//         // font-size: 1.2rem; // ~16px
+//         font-size: clamp(rem(16), 5vw, rem(22));
+//         color: #666;
+//         font-weight: 400;
+//       }
+
+//       .buttons {
+//         display: flex;
+//         justify-content: center;
+//         gap: 1rem;
+//         flex-wrap: wrap;
+//         margin-top: -20px;
+
+//         .hero-button {
+//           padding: 0.75rem 1.5rem;
+//           border-radius: 6px;
+//           font-weight: 600;
+//           text-decoration: none;
+//           transition: all 0.3s ease;
+
+//           &.primary {
+//             background: #d4a437;
+//             color: white;
+
+//             &:hover {
+//               background: #b8922b;
+//             }
+//           }
+
+//           &.secondary {
+//             background: #f1f1f1;
+//             color: #333;
+
+//             &:hover {
+//               background: #e1e1e1;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @keyframes slideInLeft {
+//   from {
+//     opacity: 1;
+//     transform: translateX(-150px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+// .painter {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 2;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   animation: slideInLeft 1.2s ease-out forwards;
+// }
+
+.hero-vibrant {
+  position: relative;
+  // padding: 4rem 1.5rem;
+  transition: background-color 1s ease;
+  text-align: center;
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
+    max-height: 1000px;
+    @media (max-width: 480px) {
+      max-height: 600px;
+    }
+  }
 
-    .card-image {
-      background-color: var(--bg-color, #b8922b); // default color
-      transition: background-color 1.2s ease;
-      display: flex;
-      justify-content: center;
-      position: relative; // Important for layering
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-      img {
-        width: 100%;
+  .paint-stroke-wrapper {
+    position: relative;
+    display: inline-block;
+
+    width: 100%;
+
+    // @media (max-width: 480px) {
+    //   width: 100%;
+    // }
+    // margin-bottom: 1.5rem;
+
+    .paint-stroke {
+      width: 100%;
+      max-width: 900px;
+      max-height: 600px;
+      margin-top: -100px;
+      object-fit: cover;
+
+      @media (max-width: 768px) {
+        width: 100vw; // ✅ full screen width
+        max-width: 100vw; // ✅ override any max
         height: auto;
-        object-fit: cover;
-        box-sizing: border-box;
+        max-width: 600px;
+        margin-top: -90px; // optional tweak
       }
 
-      .painter {
-        position: absolute;
-        top: 0;
-        left: -25%;
-        z-index: 2; // Make sure this is above .hero-bg-image
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        pointer-events: none; // optional, makes sure it doesn’t block clicks
-        box-sizing: border-box;
-        @media (max-width: 430px) {
-          object-fit: cover;
-        }
-      }
-
-      .hero-bg-image {
-        // position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        min-height: 350px;
-        object-fit: cover;
-        box-sizing: border-box;
-      }
-      h1 {
-        top: 5%;
-        right: 10%;
-        font-weight: 700;
-        position: absolute;
-        color: white;
-        font-size: clamp(rem(21), 4vw, rem(65));
+      @media (max-width: 480px) {
+        margin-top: -70px; // optional fine-tune
       }
     }
 
-    .card-content {
-      padding-top: rem(16);
-      padding-bottom: rem(20);
-      padding-left: rem(5);
-      padding-right: rem(5);
+    .hero-title {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      // color: rgb(248, 242, 210);
+      @media (max-width: 480px) {
+        width: 70%;
+      }
+    }
+  }
 
-      h1 {
-        font-size: clamp(rem(8), 5vw, rem(32));
+  .hero-tagline {
+    background: linear-gradient(to right, #ff6a00, #ffd200);
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    // margin: 1rem 0;
+    font-size: 1rem;
+    position: absolute;
+    top: 35%;
 
-        margin-bottom: 0.5rem;
-        font-weight: 700;
-        color: #222;
-        text-wrap: nowrap;
+    @media (max-width: 768px) {
+      top: 50%;
+    }
+    @media (max-width: 480px) {
+      top: 35%;
+    }
+  }
+
+  .style-text {
+    max-width: 720px;
+    color: #333 !important;
+
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 1.5rem auto 2rem;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      top: 60%;
+    }
+    @media (max-width: 480px) {
+      top: 40%;
+    }
+
+    .hero-button {
+      padding: 0.75rem 1.5rem;
+      border-radius: 40px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+
+      &.primary {
+        background-color: #ffcf00;
+
+        color: #000;
       }
 
-      .hero-tagline {
-        // font-size: 1.2rem; // ~16px
-        font-size: clamp(rem(16), 5vw, rem(22));
-        color: #666;
-        font-weight: 400;
+      &.secondary {
+        background-color: white;
+        color: #000;
       }
+    }
+  }
 
-      .buttons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-top: -20px;
+  .hero-couch {
+    // width: 100%;
+    // max-width: 1000px;
+    // margin: 0 auto;
 
-        .hero-button {
-          padding: 0.75rem 1.5rem;
-          border-radius: 6px;
-          font-weight: 600;
-          text-decoration: none;
-          transition: all 0.3s ease;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
 
-          &.primary {
-            background: #d4a437;
-            color: white;
+    z-index: 2 !important;
+    width: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    box-sizing: border-box;
+    margin-top: -150px;
 
-            &:hover {
-              background: #b8922b;
-            }
-          }
+    @media (max-width: 768px) {
+      height: auto;
+      margin-top: -90px;
+    }
 
-          &.secondary {
-            background: #f1f1f1;
-            color: #333;
+    @media (min-width: 468px) {
+      height: auto;
+      margin-bottom: -90px;
+    }
+  }
 
-            &:hover {
-              background: #e1e1e1;
-            }
-          }
-        }
-      }
+  .paint-bucket {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 90px;
+  }
+
+  @media (max-width: 768px) {
+    .paint-stroke-wrapper .hero-title {
+      font-size: 1.8rem;
+    }
+
+    // .buttons {
+    //   flex-direction: column;
+    //   align-items: center;
+    // }
+  }
+}
+
+.couch-wrapper {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.744);
+    border-radius: 50%;
+    filter: blur(12px);
+    z-index: 1;
+
+    @media (max-width: 480px) {
+      bottom: 70px;
+      width: 90%;
     }
   }
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 1;
-    transform: translateX(-150px);
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
   }
-  to {
+
+  100% {
+    transform: scale(1);
     opacity: 1;
-    transform: translateX(0);
   }
 }
 
-.painter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: slideInLeft 1.2s ease-out forwards;
+.pop-animation {
+  animation: popIn 0.9s ease-out forwards;
+}
+
+@keyframes popOnly {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes baselineUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.baseline-up {
+  animation: baselineUp 0.8s ease-out forwards;
+}
+
+@mixin animate-baseline($delay: 0s) {
+  animation: baselineUp 0.8s ease-out $delay forwards;
+}
+
+.paint-stroke {
+  @include animate-baseline(0s);
+}
+.hero-tagline {
+  @include animate-baseline(0.2s);
+}
+.hero-vibrant {
+  .hero-button {
+    @include animate-baseline(0.3s);
+  }
+}
+.style-text {
+  @include animate-baseline(0.4s);
+}
+
+.hero-couch {
+  @include animate-baseline(0.5s);
+}
+
+.baseline-up {
+  opacity: 0; // <-- hides it initially
+  animation-fill-mode: both;
 }
