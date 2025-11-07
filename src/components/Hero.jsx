@@ -90,7 +90,7 @@ import { Link } from "react-router-dom";
 import clientInfo from "../config/clientInfo";
 
 // Images
-import paintStroke from "../assets/images/hero/paint-stroke.png";
+import paintStroke from "../assets/images/hero/paint-stroke.webp";
 import couch from "../assets/images/hero/couch.webp";
 import paintBucket from "../assets/images/hero/paint-bucket.svg";
 import logo from "../assets/images/hero/logo2.svg";

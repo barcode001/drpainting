@@ -173,7 +173,7 @@
   .paint-stroke-wrapper {
     position: relative;
     display: inline-block;
-
+    max-width: 1200px;
     width: 100%;
 
     // @media (max-width: 480px) {
@@ -183,10 +183,17 @@
 
     .paint-stroke {
       width: 100%;
-      max-width: 900px;
+      max-width: 1200px;
       max-height: 600px;
-      margin-top: -100px;
+      margin-top: -150px;
       object-fit: cover;
+
+      @media (max-width: 1024px) {
+        margin-top: 30; // optional fine-tune
+        width: 990px;
+        height: 650px;
+        width: 100%;
+      }
 
       @media (max-width: 768px) {
         width: 100vw; // ✅ full screen width
@@ -197,7 +204,9 @@
       }
 
       @media (max-width: 480px) {
-        margin-top: -70px; // optional fine-tune
+        margin-top: 10; // optional fine-tune
+        width: 390px;
+        height: 350px;
       }
     }
 
@@ -206,7 +215,7 @@
       top: 30%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 2.6rem;
+      font-size: 2.3rem;
       font-weight: 700;
       color: white;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -230,20 +239,23 @@
     top: 35%;
 
     @media (max-width: 768px) {
-      top: 50%;
+      top: 30%;
     }
+
     @media (max-width: 480px) {
       top: 35%;
     }
   }
 
   .style-text {
+    position: absolute;
     max-width: 720px;
     color: #333 !important;
-
     font-size: 1.1rem;
     font-weight: 400;
     margin: 1.5rem auto 2rem;
+
+    top: 50%;
 
     @media (max-width: 768px) {
       display: none;
@@ -261,7 +273,7 @@
     z-index: 2;
 
     @media (max-width: 768px) {
-      top: 60%;
+      top: 40%;
     }
     @media (max-width: 480px) {
       top: 40%;
@@ -301,16 +313,21 @@
     min-height: 400px;
     object-fit: cover;
     box-sizing: border-box;
-    margin-top: -150px;
+    margin-top: 40px;
 
+    @media (max-width: 1024px) {
+      margin-bottom: -100px;
+      margin-top: -24px;
+    }
     @media (max-width: 768px) {
-      height: auto;
-      margin-top: -90px;
+      margin-bottom: -90px;
+      margin-top: -24px;
     }
 
-    @media (min-width: 468px) {
+    @media (max-width: 468px) {
       height: auto;
-      margin-bottom: -90px;
+      margin-bottom: -40px;
+      margin-top: -24px;
     }
   }
 
