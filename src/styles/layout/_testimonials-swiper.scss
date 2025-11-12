@@ -1,105 +1,3 @@
-// @use "../abstracts/functions" as *;
-// .testimonials-swiper {
-//   padding: 4rem 1.5rem;
-//   background-color: #fffce8;
-
-//   @media (max-width: rem(430)) {
-//     padding: 0.5rem 1.5rem;
-//   }
-
-//   .container {
-//     max-width: 1200px;
-//     margin: 0 auto;
-//   }
-
-//   h2 {
-//     text-align: center;
-//     margin-bottom: 2rem;
-//     font-size: 2rem;
-//     color: #222;
-//   }
-//   .center-button {
-//     text-align: center;
-//     // margin-top: 2rem;
-//     margin-bottom: rem(20);
-//   }
-//   .testimonial-slide {
-//     background: white;
-//     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.128);
-//     border-radius: 1rem;
-//     padding: 2rem;
-//     max-width: 700px;
-//     margin: 0 auto;
-//     text-align: center;
-//     height: rem(170);
-
-//     .quote {
-//       font-style: italic;
-//       font-size: 1.1rem;
-//       color: #333;
-//       margin-bottom: 1rem;
-//     }
-
-//     .meta {
-//       font-weight: 600;
-//       color: #d4a437;
-//     }
-//   }
-//   .swiper {
-//     padding-bottom: 3rem;
-//   }
-
-//   .swiper-pagination-bullet {
-//     background: #d4a437;
-//     opacity: 0.6;
-
-//     &-active {
-//       opacity: 1;
-//     }
-//   }
-// }
-
-// .review-link {
-//   display: inline-block;
-//   margin-top: 1rem;
-//   font-weight: 600;
-//   text-decoration: none;
-//   transition: color 0.3s ease;
-//   color: #333;
-
-//   &:hover {
-//     color: #b8922b;
-//   }
-// }
-
-// .swiper-button-next,
-// .swiper-button-prev {
-//   color: #d4a437; // gold
-//   background: rgba(255, 255, 255, 0.9); // light background circle
-//   border-radius: 50%;
-//   width: 40px;
-//   height: 40px;
-//   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); // shadow for contrast
-//   z-index: 2;
-
-//   &:after {
-//     font-size: 20px;
-//   }
-
-//   &:hover {
-//     color: #b8922b;
-//     background: #fffbe2;
-//   }
-// }
-
-// .swiper-button-next {
-//   right: -20px;
-// }
-
-// .swiper-button-prev {
-//   left: -20px;
-// }
-
 @use "../abstracts/functions" as *;
 
 /* Swiper Layout */
@@ -178,6 +76,7 @@
       cursor: pointer;
       transition: color 0.2s ease;
       margin-bottom: 30px;
+
       &:hover {
         color: #a67a46;
         text-decoration: underline;
@@ -185,11 +84,12 @@
     }
   }
   .hero-button {
-    border-radius: 40px;
-    background-color: #ffcf00;
-    color: black;
+    border-radius: 40px !important;
+    background-color: #ffcf00 !important;
+    color: black !important;
+
     &:hover {
-      background-color: #b8922b;
+      background-color: #b8922b !important;
     }
   }
 }
