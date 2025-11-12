@@ -50,7 +50,7 @@
 
       .icon {
         font-size: 2.5rem;
-        color: #d4a437;
+        color: #ffcf00;
         margin-bottom: 1rem;
       }
 
@@ -80,8 +80,10 @@
     text-align: center;
 
     &.primary {
-      background-color: #d4a437;
-      color: #fff;
+      background-color: #ffcf00;
+      border-radius: 40px;
+
+      color: black;
 
       &:hover {
         background-color: #b8922b;

@@ -184,6 +184,14 @@
       }
     }
   }
+  .hero-button {
+    border-radius: 40px;
+    background-color: #ffcf00;
+    color: black;
+    &:hover {
+      background-color: #b8922b;
+    }
+  }
 }
 
 /* Popup Modal */

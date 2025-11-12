@@ -53,5 +53,11 @@
   .hero-button {
     margin-top: 2rem;
     text-align: center;
+    border-radius: 5rem;
+    background-color: #ffcf00;
+    color: #111;
+    &:hover {
+      background: #a6861e;
+    }
   }
 }

@@ -93,11 +93,11 @@
     }
 
     .hero-button {
-      background-color: #d4a437;
-      color: white;
+      background-color: #ffcf00;
+      color: black;
       font-weight: 600;
       padding: 0.75rem 2rem;
-      border-radius: 0.5rem;
+      border-radius: rem(40);
       text-decoration: none;
       display: inline-block;
       transition: background-color 0.3s ease;

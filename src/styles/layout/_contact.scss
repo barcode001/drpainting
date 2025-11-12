@@ -53,6 +53,13 @@
 
     button {
       align-self: flex-start;
+      border-radius: 5rem;
+      background-color: #ffcf00;
+      color: #111;
+      border-style: none;
+      &:hover {
+        background: #a6861e;
+      }
     }
   }
 
